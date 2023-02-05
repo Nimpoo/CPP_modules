@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Sample_1.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 13:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/05 10:40:52 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/04 16:40:06 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/05 17:14:17 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+// ? Les constructeurs peuvent avoir des paramètres, il faudra initialiser les attribues qui vont y correspondre
 
-int	main(int ac, char **av)
-{
-	std::string	ret;
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
-	std::string	space = " ";
+# include <iostream>
 
-	if (ac <= 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (1);
-	}
+class	Sample_1 {
 
-	for (int i = 1; i < ac; i++)
-	{
-		ret += av[i] + space;
-	}
+public:
 
-	for (size_t i = 0; i < ret.size(); i++)
-	{
-		ret[i] = std::toupper(ret[i]);
-	}
+	char	a1;
+	int		a2;
+	float	a3;
 
-	std::cout << ret << std::endl;
-	return (0);
-}
+	Sample_1( char p1, int p2, float p3 );
+	~Sample_1( void );
+
+	void	bar( void )	;
+
+};
+
+#endif

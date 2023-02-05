@@ -6,33 +6,35 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:39:09 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/05 11:45:44 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:25:05 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sample.class.hpp"
 
-// ? Dans ce fichier .cpp, on fait la DÉFINITION D'UNE CLASS
-// ? On définit les fonctions qu'il y a dans la class
-
-Sample::Sample( void ) {	// ! Je définis mon Constructeur 'Sample( void )' de la class 'Sample'
-
-// ? Explication de la synthax : 
-// * dans la class 'Sample', j'accède à la fonction 'Sample( void )' (ici le Constructeur)
-// * La notation est la même que pour les namespaces
+Sample::Sample( void ) {
 
 	std::cout << "Constructor called" << std::endl;
 	return ;
 
 }
 
-Sample::~Sample( void ) {	// ! Je définis mon Destructeur '~Sample( void )' de la class 'Sample'
-
-// * dans la class 'Sample', j'accède à la fonction '~Sample( void )' (ici le Destructeur)
+Sample::~Sample( void ) {
 
 	std::cout << "Destructor called" << std::endl;
 	return ;
 
 }
 
-// ! À NOTER : les Cons/Dest n'ont pas de types de retour, c'est "comme un void" mais on ne l'écrit pas
+
+// ! IMPORTANT : la fonction bar() possède 0 paramètre comme le sous entend le 'void'
+// ! Mais en vérité, par défaut C++ passera toujours un paramètre et toujours en premier : 'this' (prochain module d'entrainement)
+// ! 'this' est un pointeur sur l'instance courante
+// ! Par conséquant, la fonction bar() a alors 1 paramètre et non 0
+
+void	Sample::bar( void ) {
+	
+	std::cout << "Member function bar called" << std::endl;
+	return ;
+
+}

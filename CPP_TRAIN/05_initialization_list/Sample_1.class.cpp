@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Sample_1.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 13:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/05 10:40:52 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/04 16:39:09 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/05 17:07:18 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Sample_1.class.hpp"
 
-int	main(int ac, char **av)
-{
-	std::string	ret;
+Sample_1::Sample_1( char p1, int p2, float p3 ) {
 
-	std::string	space = " ";
+	std::cout << "Constructor called" << std::endl;
 
-	if (ac <= 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (1);
-	}
+	this->a1 = p1;
 
-	for (int i = 1; i < ac; i++)
-	{
-		ret += av[i] + space;
-	}
+	this->a2 = p2;
 
-	for (size_t i = 0; i < ret.size(); i++)
-	{
-		ret[i] = std::toupper(ret[i]);
-	}
+	this->a3 = p3;
 
-	std::cout << ret << std::endl;
-	return (0);
+	return ;
+
+}
+
+Sample_1::~Sample_1( void ) {
+
+	std::cout << "Destructor called" << std::endl;
+	return ;
+
 }

@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 15:31:59 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/04 16:00:53 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/05 11:00:18 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 
 // * Ici, une variable et une fonction globale quelconque
 int	var_gl = 1;
-int	f(void) {return (2);}
+int	f( void ) { return (2); }
 
 // * Le nom du namespace est 'Foo' et les variables qu'elle contient peuvent avoir le même nom que es variables
 // * globales ou d'autres namespaces
 namespace	Foo {
 
 	int	var_gl = 3;
-	int	f(void) {return (4);}
+	int	f( void ) { return (4); }
 
 }
 
 namespace	Bar {
 
 	int	var_gl = 5;
-	int	f(void) {return (6);}
+	int	f( void ) { return (6); }
 
 }
 

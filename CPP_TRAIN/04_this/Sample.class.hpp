@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 13:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/05 10:40:52 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/04 16:40:06 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/05 17:01:10 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+// ? Comment faire référence à l'instance courante de la class ?
+// ? On utilise le mot clé 'this'
 
-int	main(int ac, char **av)
-{
-	std::string	ret;
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
-	std::string	space = " ";
+# include <iostream>
 
-	if (ac <= 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (1);
-	}
+class	Sample {
 
-	for (int i = 1; i < ac; i++)
-	{
-		ret += av[i] + space;
-	}
+public:
 
-	for (size_t i = 0; i < ret.size(); i++)
-	{
-		ret[i] = std::toupper(ret[i]);
-	}
+	int		foo;
 
-	std::cout << ret << std::endl;
-	return (0);
-}
+	Sample( void );
+	~Sample( void );
+
+	void	bar( void )	;
+
+};
+
+#endif

@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 13:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/05 10:40:52 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/05 11:31:50 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/05 13:28:36 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Sample.class.hpp"
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	std::string	ret;
+// * On instencie la variable "instance"
+	Sample	instance;
 
-	std::string	space = " ";
+// * On utilise l'attribut 'foo' de la variable 'instance' (si pointeur, cela aurait été une flèche ->)
+	instance.foo = 42;
 
-	if (ac <= 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (1);
-	}
+	std::cout << "instance foo: " << instance.foo << std::endl;
 
-	for (int i = 1; i < ac; i++)
-	{
-		ret += av[i] + space;
-	}
+// * On fait la même chose ici avec notre fonction bar
+	instance.bar();
 
-	for (size_t i = 0; i < ret.size(); i++)
-	{
-		ret[i] = std::toupper(ret[i]);
-	}
-
-	std::cout << ret << std::endl;
 	return (0);
+
 }
