@@ -21,10 +21,13 @@ class	Sample_1 {
 
 public:
 
+// ? Le but ici est d'initialisé les 3 attributs de class avec les 3 paramètres du Constructeur
+// ! Le code de la définition du Constrcteur est différent
 	char	a1;
 	int		a2;
 	float	a3;
 
+// * Le constructeur prend 3 paramètres
 	Sample_1( char p1, int p2, float p3 );
 	~Sample_1( void );
 

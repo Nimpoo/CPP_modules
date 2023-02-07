@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample_1.class.cpp                                   :+:      :+:    :+:   */
+/*   Sample_2.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,28 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sample_1.class.hpp"
+#include "Sample_2.class.hpp"
 
-Sample_1::Sample_1( char p1, int p2, float p3 ) {
+// ? Il n'y a plus d'initialisation classique
+// * La synthax utilisée ici est : une liste d'initialisation
+// * on met un deux-point ':' suivi de l'attribut, puis entre parenthèse la valeur que je souhaite initialiser
+// ! C'est une construction
+Sample_2::Sample_2( char p1, int p2, float p3 ) : a1(p1), a2(p2), a3(p3) {
 
-	std::cout << "Constructor [1] called" << std::endl;
+	std::cout << "Constructor [2] called" << std::endl;
 
-	this->a1 = p1;
 	std::cout << "this->a1: " << this->a1 << std::endl;
 
-	this->a2 = p2;
 	std::cout << "this->a2: " << this->a2 << std::endl;
 
-	this->a3 = p3;
 	std::cout << "this->a3: " << this->a3 << std::endl;
 
 	return ;
 
 }
 
-Sample_1::~Sample_1( void ) {
+Sample_2::~Sample_2( void ) {
 
-	std::cout << "Destructor [1] called" << std::endl;
+	std::cout << "Destructor [2] called" << std::endl;
 	return ;
 
 }
+
+// ! ATTENTION : cette méthode d'initialisation (initialization list) devra tout le temps
+// ! être utilisé pour ne plus avoir de problèmes par la suite.
+// ! Ce qui est fait dans Sample_1.class.hpp/cpp NE SERA PLUS À FAIRE

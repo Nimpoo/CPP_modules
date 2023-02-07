@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/05 10:40:52 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:56:12 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	main(int ac, char **av)
 {
 	std::string	ret;
 
-	std::string	space = " ";
-
 	if (ac <= 1)
 	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
@@ -26,7 +24,7 @@ int	main(int ac, char **av)
 
 	for (int i = 1; i < ac; i++)
 	{
-		ret += av[i] + space;
+		ret += av[i];
 	}
 
 	for (size_t i = 0; i < ret.size(); i++)

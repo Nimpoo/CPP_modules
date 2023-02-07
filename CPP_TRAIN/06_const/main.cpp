@@ -6,17 +6,17 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 11:31:50 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/06 14:42:17 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:26:54 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sample_1.class.hpp"
-#include "Sample_2.class.hpp"
+#include "Sample.class.hpp"
 
 int	main(void)
 {
-	Sample_1	instance_1('a', 42, 4.2f);
-	Sample_2	instance_2('z', 24, 2.4f);
+	Sample	instance(3.14f);
+
+	instance.bar();
 
 	return (0);
 

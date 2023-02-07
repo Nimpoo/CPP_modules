@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Sample_2.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/05 11:31:50 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/06 14:42:17 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/04 16:40:06 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/05 17:14:17 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sample_1.class.hpp"
-#include "Sample_2.class.hpp"
+#ifndef SAMPL_2_CLASS_HPP
+# define SAMPL_2_CLASS_HPP
 
-int	main(void)
-{
-	Sample_1	instance_1('a', 42, 4.2f);
-	Sample_2	instance_2('z', 24, 2.4f);
+# include <iostream>
 
-	return (0);
+// * Sample_2 est exactement le même que Sample_1, seulement l'initialisation des
+// * attribus seront différent dans Sample_2.class.cpp
 
-}
+class	Sample_2 {
+
+public:
+
+	char	a1;
+	int		a2;
+	float	a3;
+
+	Sample_2( char p1, int p2, float p3 );
+	~Sample_2( void );
+
+	void	bar( void )	;
+
+};
+
+#endif
