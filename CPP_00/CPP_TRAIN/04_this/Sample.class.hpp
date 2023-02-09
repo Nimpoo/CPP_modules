@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/04 16:40:06 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/05 17:01:10 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+// ? Comment faire référence à l'instance courante de la class ?
+// ? On utilise le mot clé 'this'
+
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
 # include <iostream>
 
-# include "Contact.hpp"
-
-class PhoneBook {
+class	Sample {
 
 public:
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	int		foo;
 
-	void	addContact( void );
-	void	searchContact( void );
+	Sample( void );
+	~Sample( void );
 
-private:
+	void	bar( void )	;
 
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
 };
-
-void	eofProtect( void );
 
 #endif

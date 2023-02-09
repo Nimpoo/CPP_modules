@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/08 12:08:34 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/09 10:53:41 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+// ? Il existe des attributs et des fonctions NON MEMBRES
+
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
 # include <iostream>
 
-# include "Contact.hpp"
+class Sample {
 
-class PhoneBook {
+// * Il suffit de rajouter le mot clé 'static' pour rendre un attribut/fonction NON MEMBRE
+// * L'attribut/fonction existera même aprè la destruction de la class, jusqu'aà la fin du programme
 
 public:
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	Sample( void );
+	~Sample( void );
 
-	void	addContact( void );
-	void	searchContact( void );
+	static int		getNbInst( void );
 
 private:
 
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
-};
+	static int		_nbInst;
 
-void	eofProtect( void );
+};
 
 #endif

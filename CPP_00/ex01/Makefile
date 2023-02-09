@@ -6,7 +6,7 @@
 #    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/04 14:54:14 by mayoub            #+#    #+#              #
-#    Updated: 2023/02/04 14:55:17 by mayoub           ###   ########.fr        #
+#    Updated: 2023/02/09 11:51:13 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,15 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	PhoneBook.cpp
+SRC		=	PhoneBook.cpp	\
+			Contact.cpp		\
+			main.cpp
 
-OBJ		=	$(SRC:.cpp=.o)
+#OBJ		=	$(SRC:.cpp=.o)
 
 NAME	=	PhoneBook
 
-$(NAME)	:	$(OBJ)
+$(NAME)	:	#$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 all		:	$(NAME)

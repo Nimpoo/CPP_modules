@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/08 12:08:34 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/08 14:58:32 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
 # include <iostream>
 
-# include "Contact.hpp"
-
-class PhoneBook {
+class Sample {
 
 public:
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	Sample( int v );
+	~Sample( void );
 
-	void	addContact( void );
-	void	searchContact( void );
+	int		getFoo( void ) const;
+	int		compare( Sample * other ) const;
 
 private:
 
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
-};
+	int		_foo;
 
-void	eofProtect( void );
+};
 
 #endif

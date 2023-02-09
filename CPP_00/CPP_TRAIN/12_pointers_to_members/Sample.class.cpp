@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Sample.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/08 12:12:16 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/09 11:20:22 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Sample.class.hpp"
 
-# include <iostream>
+Sample::Sample( void ) {
 
-# include "Contact.hpp"
+	std::cout << "Constructor called" << std::endl;
 
-class PhoneBook {
+	this->foo = 0;
 
-public:
+	return ;
+}
 
-	PhoneBook( void );
-	~PhoneBook( void );
+Sample::~Sample( void ) {
 
-	void	addContact( void );
-	void	searchContact( void );
+	std::cout << "Destructor called" << std::endl;
 
-private:
+	return ;
+}
 
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
-};
+void	Sample::Bar( void ) const {
 
-void	eofProtect( void );
+	std::cout << "Membre function bar called" << std::endl;
 
-#endif
+	return ;
+}
+

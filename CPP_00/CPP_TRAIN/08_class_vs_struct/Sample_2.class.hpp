@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Sample_2.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/08 10:44:03 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/08 12:03:01 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef SAMPLE_2_CLASS_HPP
+# define SAMPLE_2_CLASS_HPP
 
 # include <iostream>
 
-# include "Contact.hpp"
+// * Ici une class
+// ? À aucun moment il n'y a de scope 'public' ou 'privé'
 
-class PhoneBook {
+// * Par défaut, il y a une scope 'private' dans une class
 
-public:
+class	Sample_2 {
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	int		foo;
 
-	void	addContact( void );
-	void	searchContact( void );
+	Sample_2( void );
+	~Sample_2( void );
 
-private:
+	void	Bar( void ) const;
 
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
 };
-
-void	eofProtect( void );
 
 #endif

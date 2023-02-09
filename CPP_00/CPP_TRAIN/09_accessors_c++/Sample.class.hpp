@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/08 12:08:34 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/08 14:33:28 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+// ? C'est quoi un accesseur ???
+
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
 # include <iostream>
 
-# include "Contact.hpp"
-
-class PhoneBook {
+class Sample {
 
 public:
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	Sample( void );
+	~Sample( void );
 
-	void	addContact( void );
-	void	searchContact( void );
+// * Le 'geter' permet de récupérer un attribut PRIVATE pour pouvoir l'utiliser/afficher
+// * à l'extérieur de la class
+	int		getFoo( void ) const;
+
+// * Le 'seter' permet de set un attribut PRIVATE
+	void	setFoo( int v );
 
 private:
 
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
-};
+	int		_foo;
 
-void	eofProtect( void );
+};
 
 #endif

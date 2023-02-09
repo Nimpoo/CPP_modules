@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:27 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/05 11:31:50 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/06 15:27:20 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Sample.class.hpp"
 
-# include <iostream>
+int	main(void)
+{
+// * On instencie la variable "instance"
+	Sample	instance;
 
-# include "Contact.hpp"
+// * On utilise l'attribut 'foo' de la variable 'instance' (si pointeur, cela aurait été une flèche ->)
+	instance.foo = 42;
 
-class PhoneBook {
+	std::cout << "instance foo: " << instance.foo << std::endl;
 
-public:
+// * On fait la même chose ici avec notre fonction bar
+	instance.bar();
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	return (0);
 
-	void	addContact( void );
-	void	searchContact( void );
-
-private:
-
-// * Créer un TABLEAU D'OBJETS de la class CONTACT
-	Contact _tabContact[8];
-	int		_index;
-	
-};
-
-void	eofProtect( void );
-
-#endif
+}
