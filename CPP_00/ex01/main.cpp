@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:39:27 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:07:54 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/09 14:37:48 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,11 @@ int	main(void)
 	while (true)
 	{
 		std::cout << "PhoneBook ! What do you want to do ?" << std::endl;
-		std::cin >> buffer;
-		eofProtect();
+		(std::cin >> buffer, eofProtect());
 		if (!buffer.compare("ADD")) // * Je pouvais utiliser '=='
 			repertory.addContact();
 		else if (!buffer.compare("SEARCH"))
-			break ;
+			repertory.searchContact();
 		else if (!buffer.compare("EXIT"))
 			break ;
 	}
