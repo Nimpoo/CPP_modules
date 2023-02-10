@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:34:28 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 23:36:38 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/02/10 09:39:48 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,5 @@ void	Contact::setId( int id_buffer ) {
 
 	std::cout << "_id = " << _id << std::endl;
 
-	return ;
+	return;
 }
