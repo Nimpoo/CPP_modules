@@ -3,27 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:34:28 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/10 09:39:48 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/02/10 12:50:27 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
+/*--------------CONSTRUCTOR----------------*/
 Contact::Contact( void ) {
 	return ;
 }
+/*-----------------------------------------*/
 
+
+/*---------------DESTRUCTOR----------------*/
 Contact::~Contact( void ) {
 	return ;
 }
+/*-----------------------------------------*/
 
-std::string	Contact::getName( void ) {
-	return this->_name;
+
+/*################ACCESSORS################*/
+
+/*-----------------GETERS------------------*/
+std::string	Contact::getName( void )
+{
+	return (this->_name);
 }
 
+std::string	Contact::getFirstName( void )
+{
+	return (this->_firstName);
+}
+
+std::string	Contact::getNickname( void )
+{
+	return (this->_nickname);
+}
+
+std::string	Contact::getDarkestSecret( void )
+{
+	return (this->_darkestSecret);
+}
+
+int			Contact::getPhoneNumber( void )
+{
+	return (this->_phoneNumber);
+}
+
+int			Contact::getId( void )
+{
+	return (this->_id);
+}
+/*-----------------------------------------*/
+
+
+/*-----------------SETERS------------------*/
 void	Contact::setName( std::string name_buffer ) {
 
 	this->_name = name_buffer;
@@ -75,5 +113,8 @@ void	Contact::setId( int id_buffer ) {
 
 	std::cout << "_id = " << _id << std::endl;
 
-	return;
+	return ;
 }
+/*-----------------------------------------*/
+
+/*#########################################*/
