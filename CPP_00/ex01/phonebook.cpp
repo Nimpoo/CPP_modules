@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 14:55:32 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:39:56 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/09 23:36:28 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook( void ){
+PhoneBook::PhoneBook( void ) {
 
 	this->_index = 0;
 
@@ -35,6 +35,11 @@ void	PhoneBook::searchContact( void ) {
 		std::cout << "-";
 	std::cout << std::endl;
 
+	if (PhoneBook::_tabContact[0].getName().empty())
+	{
+		std::cout << "No contact register :/" << std::endl;
+		return ;
+	}
 	std::cout << "Who ?" << std::endl;
 	(std::cin >> buffer, eofProtect());
 

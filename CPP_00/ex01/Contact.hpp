@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:30:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/09 14:13:14 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/09 23:35:32 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ public:
 	Contact( void );
 	~Contact( void );
 
+	std::string	getName( void );
 	void		setName( std::string name_buffer );
 	void		setFirstName( std::string fisrtName_buffer );
 	void		setNickname( std::string nickname_buffer );
