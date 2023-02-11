@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 14:55:32 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/10 14:37:52 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/11 19:10:22 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	PhoneBook::displayContact( void ) {
 	std::string	buffer;
 
 // ? Affiche tout les contacts
-	for (int i = 0; i < NBR_CONTACTS && !this->_tabContact[i].getName().empty(); i++)
+	for (int i = 0; i < MAX_CONTACTS && !this->_tabContact[i].getName().empty(); i++)
 	{
 		std::cout << "|" << std::setw(10) << this->_tabContact[i].getId();
 		std::cout << "|" << std::setw(10) << this->_tabContact[i].getFirstName();
@@ -77,8 +77,8 @@ void	PhoneBook::searchContact( void ) {
 
 void	PhoneBook::removingOldestContact( void ) {
 
-	this->_index = 8;
-	for (int i = 0; i < NBR_CONTACTS - 1; i++)
+	this->_index = MAX_CONTACTS;
+	for (int i = 0; i + 1 < MAX_CONTACTS; i++)
 	{
 		this->_tabContact[i].setName(this->_tabContact[i + 1].getName());
 		this->_tabContact[i].setFirstName(this->_tabContact[i + 1].getFirstName());
@@ -94,39 +94,46 @@ void	PhoneBook::removingOldestContact( void ) {
 void	PhoneBook::addContact( void ) {
 
 	std::string	buffer;
+	int index;
+	// index = (this->_index < MAX_CONTACTS ? this->_index : MAX_CONTACTS - 1);
 
-	if (this->_index > NBR_CONTACTS)
+	if (this->_index < MAX_CONTACTS)
+		index = this->_index;
+	else
+		index = MAX_CONTACTS - 1;
+
+	if (this->_index + 1 > MAX_CONTACTS)
 		removingOldestContact();
 
 	std::cout << "Name ?" << std::endl;
 	(std::cin >> buffer, eofProtect());
-	this->_tabContact[ this->_index ].setName(buffer);
+	this->_tabContact[ index ].setName(buffer);
 	std::cout << std::endl << std::endl;
 
 	std::cout << "First Name ?" << std::endl;
 	(std::cin >> buffer, eofProtect());
-	this->_tabContact[ this->_index ].setFirstName(buffer);
+	this->_tabContact[ index ].setFirstName(buffer);
 	std::cout << std::endl << std::endl;
 
 	std::cout << "Nickname ?" << std::endl;
 	(std::cin >> buffer, eofProtect());
-	this->_tabContact[ this->_index ].setNickname(buffer);
+	this->_tabContact[ index ].setNickname(buffer);
 	std::cout << std::endl << std::endl;
 
 	std::cout << "Darkest secret ?" << std::endl;
 	(std::cin >> buffer, eofProtect());
-	this->_tabContact[ this->_index ].setDarkestSecret(buffer);
+	this->_tabContact[ index ].setDarkestSecret(buffer);
 	std::cout << std::endl << std::endl;
 
 	std::cout << "Phone Number ?" << std::endl;
 	(std::cin >> buffer, eofProtect());
-	this->_tabContact[ this->_index ].setPhoneNumber(atoi(buffer.c_str()));
+	this->_tabContact[ index ].setPhoneNumber(atoi(buffer.c_str()));
 	std::cout << std::endl << std::endl;
 
-	this->_tabContact[ this->_index ].setId(this->_index);
+	this->_tabContact[ index ].setId(index);
 
-	// if (this->_index < NBR_CONTACTS)
-	this->_index++;
+	if (this->_index < MAX_CONTACTS)
+		this->_index++;
 
 	std::cout << "_index = " << this->_index << std::endl;
 

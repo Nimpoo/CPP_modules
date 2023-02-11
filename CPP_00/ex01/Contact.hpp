@@ -6,14 +6,14 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:30:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/10 12:58:34 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/11 19:13:05 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include <iostream>
+# include	<iostream>
 
 class Contact {
 
@@ -22,7 +22,7 @@ public:
 	Contact( void );
 	~Contact( void );
 
-/*-----------------GETERS------------------*/
+/*---------------- GETERS -----------------*/
 	std::string	getName( void );
 	std::string	getFirstName( void );
 	std::string	getNickname( void );
@@ -30,7 +30,7 @@ public:
 	int			getPhoneNumber( void );
 	int			getId( void );
 
-/*-----------------SETERS------------------*/
+/*---------------- SETERS -----------------*/
 	void		setName( std::string name_buffer );
 	void		setFirstName( std::string fisrtName_buffer );
 	void		setNickname( std::string nickname_buffer );
