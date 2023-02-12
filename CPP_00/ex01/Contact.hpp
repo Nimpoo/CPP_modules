@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:30:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/11 19:13:05 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/12 19:08:21 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	std::string	getFirstName( void );
 	std::string	getNickname( void );
 	std::string	getDarkestSecret( void );
-	int			getPhoneNumber( void );
+	std::string	getPhoneNumber( void );
 	int			getId( void );
 
 /*---------------- SETERS -----------------*/
@@ -35,10 +35,12 @@ public:
 	void		setFirstName( std::string fisrtName_buffer );
 	void		setNickname( std::string nickname_buffer );
 	void		setDarkestSecret( std::string darkestSecret_buffer );
-	void		setPhoneNumber( int phoneNumber_buffer );
+	void		setPhoneNumber( std::string phoneNumber_buffer );
 	void		setId( int id_buffer );
 
 private:
+
+/*------------- CONTACTS INFO -------------*/
 
 	int 		_id;
 
@@ -46,7 +48,7 @@ private:
 	std::string	_firstName;
 	std::string	_nickname;
 	std::string	_darkestSecret;
-	int			_phoneNumber;
+	std::string	_phoneNumber;
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:34:28 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/11 18:58:06 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/12 19:37:38 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ Contact::Contact( void ) {
 	return ;
 }
 /*-----------------------------------------*/
-
 
 /*-------------- DESTRUCTOR ---------------*/
 Contact::~Contact( void ) {
@@ -49,7 +48,7 @@ std::string	Contact::getDarkestSecret( void )
 	return (this->_darkestSecret);
 }
 
-int			Contact::getPhoneNumber( void )
+std::string	Contact::getPhoneNumber( void )
 {
 	return (this->_phoneNumber);
 }
@@ -59,7 +58,6 @@ int			Contact::getId( void )
 	return (this->_id);
 }
 /*-----------------------------------------*/
-
 
 /*---------------- SETERS -----------------*/
 void	Contact::setName( std::string name_buffer ) {
@@ -98,7 +96,7 @@ void	Contact::setDarkestSecret( std::string darkestSecret_buffer ) {
 	return ;
 }
 
-void	Contact::setPhoneNumber( int phoneNumber_buffer ) {
+void	Contact::setPhoneNumber( std::string phoneNumber_buffer ) {
 
 	this->_phoneNumber = phoneNumber_buffer;
 
