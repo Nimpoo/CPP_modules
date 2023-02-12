@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:39:27 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/12 20:34:01 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/13 00:10:25 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	main(void)
 		}
 	}
 
-	std::cout << "See you next time ! 📭" << std::endl;
+	std::cout << std::endl << "See you next time ! 📭" << std::endl;
 
 	return (0);
 }

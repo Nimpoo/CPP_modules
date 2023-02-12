@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/12 19:50:26 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/12 23:37:18 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ public:
 
 private:
 
-/*---------- ANNEXES FUNCTIONS -----------*/
+/*----------- ANNEXES FUNCTIONS -----------*/
 	void	displayContact( std::string info );
 	void	removingOldestContact( void );
 	void	infoContact( std::string buffer );
