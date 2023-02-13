@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 14:55:32 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/13 00:33:12 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/02/13 12:35:19 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ PhoneBook::~PhoneBook( void ) {
 	return ;
 }
 /*-----------------------------------------*/
+
 
 /*########### ANNEXES FUNCTIONS ###########*/
 
@@ -65,8 +66,8 @@ void	PhoneBook::removingOldestContact( void ) {
 /*-----------------------------------------*/
 
 /*------- INFOS CONTACTS DISPLAYER --------*/
-void	PhoneBook::infoContact( std::string buffer )
-{
+void	PhoneBook::infoContact( std::string buffer ) {
+
 		std::cout << std::endl;
 		std::cout << "Here is the contact info :" << std::endl;
 		std::cout << "~ Contact N˚ [ " << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getId() << " ]" << std::endl;
@@ -131,12 +132,10 @@ void	PhoneBook::searchContact( void ) {
 			|| (!isNumber(buffer))
 			|| (buffer.empty()))
 	{
-		if (atoi(buffer.c_str()) < 1 || atoi(buffer.c_str()) > 8)
+		if (!isNumber(buffer) || buffer.empty())
+			std::cout << "Please tape the [INDEX] of the contact (not the letter or others :| )" << std::endl;
+		else if (atoi(buffer.c_str()) < 1 || atoi(buffer.c_str()) > 8)
 			std::cout << "WOW !!! CALM DOWN ! You exceed the limit of the contact number ! >>:[" << std::endl;
-		else if (!isNumber(buffer))
-			std::cout << "Please tape the [INDEX] of the contact (not the letter :| )" << std::endl;
-		else if (buffer.empty())
-			std::cout << "Tape the [INDEX] of the contact you want to see PLZ" << std::endl;
 		else if (this->_tabContact[ atoi(buffer.c_str()) - 1 ].getName().empty())
 			std::cout << "This contact doesn't exist :/ Choose an existing contact PLZ" << std::endl;
 		std::cout << "📞 >> ";
