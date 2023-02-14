@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 14:55:32 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/14 15:23:29 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:58:26 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,11 @@ void	PhoneBook::infoContact( std::string buffer ) const {
 		std::cout << std::endl;
 		std::cout << "Here is the contact info :" << std::endl;
 		std::cout << "~ Contact N˚ [ " << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getId() << " ]" << std::endl;
-		std::cout << "~ First Name :			" << this->_tabContact[atoi(buffer.c_str()) - 1].getFirstName() << std::endl;
-		std::cout << "~ Name :			" << this->_tabContact[atoi(buffer.c_str()) - 1].getName() << std::endl;
-		std::cout << "~ Nickname :			" << this->_tabContact[atoi(buffer.c_str()) - 1].getNickname() << std::endl;
-		std::cout << "~ The Darkest Secret 👀 :	" << this->_tabContact[atoi(buffer.c_str()) - 1].getDarkestSecret() << std::endl;
-		std::cout << "~ Phone Number :		" << this->_tabContact[atoi(buffer.c_str()) - 1].getPhoneNumber() << std::endl;
+		std::cout << "~ First Name :			" << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getFirstName() << std::endl;
+		std::cout << "~ Name :			" << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getName() << std::endl;
+		std::cout << "~ Nickname :			" << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getNickname() << std::endl;
+		std::cout << "~ The Darkest Secret 👀 :	" << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getDarkestSecret() << std::endl;
+		std::cout << "~ Phone Number :		" << this->_tabContact[ atoi(buffer.c_str()) - 1 ].getPhoneNumber() << std::endl;
 
 	return ;
 }
