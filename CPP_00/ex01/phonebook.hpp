@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:31:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/13 12:20:08 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:24:25 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ private:
 /*----------- ANNEXES FUNCTIONS -----------*/
 	void	displayContact( std::string info );
 	void	removingOldestContact( void );
-	void	infoContact( std::string buffer );
+	void	infoContact( std::string buffer ) const;
 
 /*------------------ TAB ------------------*/
 	Contact	_tabContact[8]; // * Créer un TABLEAU D'OBJETS de la class CONTACT
@@ -48,6 +48,6 @@ private:
 /*----------------- UTILS -----------------*/
 void		eofProtect( void );
 std::string	toupperBuffer( std::string buffer );
-bool		isNumber(const std::string& s);
+bool		isNumber( const std::string& s );
 
 #endif

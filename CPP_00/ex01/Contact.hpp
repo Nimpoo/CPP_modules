@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:30:34 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/13 12:35:42 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/13 16:16:44 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ public:
 	~Contact( void );
 
 /*---------------- GETERS -----------------*/
-	std::string	getName( void );
-	std::string	getFirstName( void );
-	std::string	getNickname( void );
-	std::string	getDarkestSecret( void );
-	std::string	getPhoneNumber( void );
-	int			getId( void );
+	std::string	getName( void ) const;
+	std::string	getFirstName( void ) const;
+	std::string	getNickname( void ) const;
+	std::string	getDarkestSecret( void ) const;
+	std::string	getPhoneNumber( void ) const;
+	int			getId( void ) const;
 
 /*---------------- SETERS -----------------*/
 	void		setName( std::string name_buffer );

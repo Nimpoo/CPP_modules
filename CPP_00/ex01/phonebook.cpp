@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 14:55:32 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/13 12:35:19 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:23:29 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	PhoneBook::removingOldestContact( void ) {
 /*-----------------------------------------*/
 
 /*------- INFOS CONTACTS DISPLAYER --------*/
-void	PhoneBook::infoContact( std::string buffer ) {
+void	PhoneBook::infoContact( std::string buffer ) const {
 
 		std::cout << std::endl;
 		std::cout << "Here is the contact info :" << std::endl;

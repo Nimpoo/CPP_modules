@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:34:28 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/13 12:35:39 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:20:21 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,33 +28,33 @@ Contact::~Contact( void ) {
 /*############### ACCESSORS ###############*/
 
 /*---------------- GETERS -----------------*/
-std::string	Contact::getName( void )
-{
+std::string	Contact::getName( void ) const{
+
 	return (this->_name);
 }
 
-std::string	Contact::getFirstName( void )
-{
+std::string	Contact::getFirstName( void ) const{
+
 	return (this->_firstName);
 }
 
-std::string	Contact::getNickname( void )
-{
+std::string	Contact::getNickname( void ) const{
+
 	return (this->_nickname);
 }
 
-std::string	Contact::getDarkestSecret( void )
-{
+std::string	Contact::getDarkestSecret( void ) const{
+
 	return (this->_darkestSecret);
 }
 
-std::string	Contact::getPhoneNumber( void )
-{
+std::string	Contact::getPhoneNumber( void ) const{
+
 	return (this->_phoneNumber);
 }
 
-int			Contact::getId( void )
-{
+int			Contact::getId( void ) const{
+
 	return (this->_id);
 }
 /*-----------------------------------------*/

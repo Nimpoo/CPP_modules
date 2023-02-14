@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:39:27 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/13 12:20:15 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/14 15:24:30 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include "Contact.hpp"
 
 /*---------- UTILS NON-MEMBER ------------*/
-bool isNumber(const std::string& s)
+bool isNumber( const std::string& s )
 {
-    for (int i = 0; s[i]; i++)
-        if (std::isdigit(s[i]) == 0)
-            return false;
-    return true;
+	for (int i = 0; s[i]; i++)
+		if (std::isdigit(s[i]) == 0)
+			return false;
+	return true;
 }
 
 void	eofProtect( void ) // * Empêche le bug du CTRL_D sur le 'cin'
