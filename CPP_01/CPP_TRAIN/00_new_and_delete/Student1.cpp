@@ -6,11 +6,11 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 11:34:02 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/15 13:36:04 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/15 13:38:01 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "new1.hpp"
+#include "Student1.hpp"
 
 Student::Student( std::string login ) : _login(login) {
 

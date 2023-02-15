@@ -6,11 +6,11 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/15 13:27:43 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/15 13:38:10 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "new2.hpp"
+#include "Student2.hpp"
 
 int	main()
 {

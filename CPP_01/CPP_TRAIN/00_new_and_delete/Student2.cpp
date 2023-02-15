@@ -6,11 +6,11 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:50:52 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/15 13:36:43 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/15 13:37:56 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "new2.hpp"
+#include "Student2.hpp"
 
 int	Student::number = 0;
 

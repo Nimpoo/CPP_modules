@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "new1.hpp"
+#include "Student1.hpp"
 
 // ? À présent, les mot clés 'new' et 'delete' remplaceront 'malloc()' et 'free()' pour simplifier
 // ? Ils sont beaucoup plus utilse en C++ pour manipuler les INSTANCES/OBJETS
