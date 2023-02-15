@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new1.hpp                                           :+:      :+:    :+:   */
+/*   Student2.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 12:24:01 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/15 12:25:58 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/15 12:51:55 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/15 13:36:57 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ class Student {
 
 public:
 
-	Student( std::string login );
+	Student( void );
 	~Student( void );
+
+	static int		number;
 
 private:
 
-	std::string	_login;
+	std::string		_login;
 
 };

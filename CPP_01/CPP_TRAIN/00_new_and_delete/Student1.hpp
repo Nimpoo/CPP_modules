@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new1.cpp                                           :+:      :+:    :+:   */
+/*   Student1.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 11:34:02 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/15 13:03:56 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/15 12:24:01 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/15 13:36:25 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "new1.hpp"
+#include <iostream>
+#include <string>
 
-Student::Student( std::string login ) : _login(login) {
+class Student {
 
-	std::cout << "Student " << _login << " is born" << std::endl;
+public:
 
-	return ;
-}
+	Student( std::string login );
+	~Student( void );
 
-Student::~Student( void ) {
+private:
 
-	std::cout << "Student " << _login << " died" << std::endl;
+	std::string	_login;
 
-	return ;
-}
+};
