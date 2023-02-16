@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main1.cpp                                           :+:      :+:    :+:   */
+/*   main1.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:35:24 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/15 12:50:30 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/16 11:48:33 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,7 @@ int	main()
 //? Le DESTRUCTEUR de "Bob" est appelé
 	return (0);
 }
+
+// ! 'new' alloue de la mémoire et renvoie un pointeur vers l'adresse de l'espace alloué dans la HEAP
+// ! C'est pour ça que la variable est un poiteur.
+// ? Si on ne 'delete' pas, cela créé des leaks
