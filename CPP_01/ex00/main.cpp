@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 19:24:07 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/16 19:28:41 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/17 16:46:39 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 int	main(void)
 {
-	Zombie	*newBorn = new newZombie(Zombie::_name);
+	Zombie	newBorn("Zombie [3]");
+
+	Zombie	*zombieCreation = newBorn.newZombie("Zombie [2]");
+
+	newBorn.randomChump("Zombie [1]");
+
+	zombieCreation->announce();
+
+	newBorn.announce();
+
+	delete zombieCreation;
 
 	return (0);
 }

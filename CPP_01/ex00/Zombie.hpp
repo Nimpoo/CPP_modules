@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 19:11:37 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/16 19:21:49 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/17 16:40:09 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ class Zombie {
 public:
 
 /*------------- CONST / DEST --------------*/
-	Zombie( void );
+	Zombie( std::string name );
 	~Zombie( void );
 
 	void	announce( void );
 
-	Zombie	*newZombie( std::string _name);
-	void	randomChump( std::string _name);
+	Zombie	*newZombie( std::string name);
+	void	randomChump( std::string name);
 
 private:
 
