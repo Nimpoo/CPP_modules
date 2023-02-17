@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main2.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:53:20 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/16 11:41:25 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/17 12:07:54 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main()
 {
 // * Le CONSTRUCTEUR de chaque case est appelé
 // ? Un tableau d'INSTANCE 'stud' créé à partir de la CLASS 'Student' est ALLOUÉ avec 'new'
+// ! ON ALLOUE TOUJOURS ET OBLIGATOIREMENT AVEC SON CONSTRUCTEUR
 	Student *stud = new Student[42];
 
 	// Student	*stud = (Student *) malloc(sizeof(Student) * 42);
