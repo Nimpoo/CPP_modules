@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 19:11:16 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/17 16:45:46 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/02/18 14:47:54 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ Zombie::~Zombie( void ) {
 }
 /*-----------------------------------------*/
 
+
+// * Ici, la variable 'newBorn' est alloué DYNAMIQUEMENT dans la HEAP
+// * La variable sera utilisable en dehpors de son INSTANCE
 Zombie	*Zombie::newZombie( std::string name ) {
 
 // ? Lorsqu'on alloue une INSTANCE de CLASS avec 'new',
@@ -47,6 +50,9 @@ Zombie	*Zombie::newZombie( std::string name ) {
 	return (newBorn);
 }
 
+
+// * Ici, la variable 'newBorn' est alloué AUTOMATIQUEMENT dans la STACK
+// * À la fin de la fonction elle sera désalloué et inutilisable en dehors de cette INSTANCE
 void	Zombie::randomChump( std::string name ) {
 
 	Zombie	newBorn(name);
