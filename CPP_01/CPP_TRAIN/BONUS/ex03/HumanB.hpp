@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:57:12 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/19 15:34:38 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/19 12:48:02 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/19 15:25:54 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 # include <iostream>
 
 # include "Weapon.hpp"
 
-class HumanA {
+class HumanB {
 
 public:
 
-	HumanA( std::string name, Weapon &type );
-	~HumanA( void );
+	HumanB( std::string name );
+	~HumanB( void );
 
 	void		attack( void );
 
+	void		setWeapon( Weapon &item );
+
 private:
 
-	std::string	_type;
-	std::string	_name;
+	Weapon		*_item;
 
-	Weapon		&_item;
+	std::string	_name;
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 14:51:22 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/18 15:37:03 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/19 15:34:15 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,13 @@ public:
 	Zombie( void );
 	~Zombie( void );
 
-/*----------------- EX00 -----------------*/
-	void		announce( void );
+	void		announce( void ) const;
 
 	Zombie		*newZombie( std::string name);
 	void		randomChump( std::string name);
 
 	void		setName( std::string name );
-	std::string	getName( void );
+	std::string	getName( void ) const;
 
 private:
 
@@ -38,7 +37,6 @@ private:
 
 };
 
-/*----------------- EX01 -----------------*/
 Zombie	*zombieHorde( int N, std::string name );
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 16:56:25 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/18 18:34:22 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/19 15:34:33 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	HumanB( std::string name );
 	~HumanB( void );
 
-	void		attack();
+	void		attack( void );
 
 	void		setWeapon( Weapon &item );
 

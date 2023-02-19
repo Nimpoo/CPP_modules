@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 14:53:08 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/18 15:39:03 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/19 15:33:29 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Zombie::~Zombie( void ) {
 }
 /*-----------------------------------------*/
 
-std::string	Zombie::getName( void ) {
+std::string	Zombie::getName( void ) const {
 
 	return (this->_name);
 }

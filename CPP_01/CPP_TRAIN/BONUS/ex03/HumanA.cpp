@@ -5,24 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:57:40 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/19 15:34:42 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/19 12:46:05 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/19 15:19:25 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
+#include "Weapon.hpp"
 
-HumanA::HumanA( std::string name, Weapon &type ) : _name(name), _item(type) {
+HumanA::HumanA( std::string name, Weapon &item ) : _item(item), _name(name) {
+
+	std::cout << "Hi [ " << this->_name << " ] !" << std::endl;
+
 	return ;
 }
 
 HumanA::~HumanA( void ) {
+
+	std::cout << "Goodbye [ " << this->_name << " ] !" << std::endl;
+
 	return ;
 }
 
-void	HumanA::attack( void ){
+void	HumanA::attack( void ) {
 
-	std::cout << this->_name << " attacks with their " << _item.getType() << std::endl;
+	std::cout << this->_name << " attacks with their " << this->_item.getType() << std::endl;
 
 	return ;
 }

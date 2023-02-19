@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 16:57:12 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/19 15:34:38 by mayoub           ###   ########.fr       */
+/*   Created: 2023/02/19 12:49:43 by mayoub            #+#    #+#             */
+/*   Updated: 2023/02/19 15:10:56 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "Weapon.hpp"
 
-# include <iostream>
+Weapon::Weapon( std::string type ) : _type(type) {
+	return ;
+}
 
-# include "Weapon.hpp"
+Weapon::~Weapon( void ) {
+	return ;
+}
 
-class HumanA {
+std::string	Weapon::getType( void ) {
+	return (this->_type);
+}
 
-public:
+void		Weapon::setType( std::string type ) {
 
-	HumanA( std::string name, Weapon &type );
-	~HumanA( void );
+	this->_type = type;
 
-	void		attack( void );
-
-private:
-
-	std::string	_type;
-	std::string	_name;
-
-	Weapon		&_item;
-
-};
-
-#endif
+	return ;
+}
