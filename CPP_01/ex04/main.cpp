@@ -6,13 +6,37 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 15:40:31 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/19 15:40:52 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/20 15:50:16 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(void)
+#include "Replace.hpp"
+
+// ? Le but est de recréer la fonction 'std::string::replace()'
+// * 3 arguments sont pris 	: <filename> = le fichier à ouvrir et traîter
+// * 						: s1		 = les occurences que l'on veut remplacer
+// * 						: s2		 = ce qui va remplacer les occurences
+// * Le sujet demande à copier <filname> dans un nouveau fichier <filname>.replace
+// * mais avec les occurences s1 dans <filename> remplacées par s2
+
+int	main(int ac, char **av)
 {
-	
+	if (ac != 4)
+	{
+		std::cout << "Error: Incorrect number of arguments." << std::endl;
+		return (0);
+	}
+
+
+	Replace	sed(av[1], av[2], av[3]);
+
+	if (!sed.getBuf())
+	{
+		std::cout << "Error: File [" << av[1] << "] doesn't exist." << std::endl;
+		return (0);
+	}
+
+	sed.replaceFunction(sed);
 
 	return (0);
 }
