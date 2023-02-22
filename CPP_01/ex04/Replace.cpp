@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:42:58 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/20 18:09:42 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/21 17:51:57 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,18 @@ std::ifstream	const &Replace::getBuf( void ) const {
 
 void	Replace::replaceFunction( Replace &sed ) const {
 
-	std::string		buf;
+	std::string		content;
+	int				i = 0;
 
-	(void) sed;
-
-	while (sed._buf)
+	while (sed._buf.good())
 	{
-		std::getline(sed._buf) >> buf;
-		std::cout << buf << " ";
+		getline(sed._buf, content, '\n');
+		if (!sed._buf.eof())
+		content += '\n';
+		i++;
+		std::cout << "[ " << i << " ]" << std::endl;
+		std::cout << content;
+		// sed._buf.getline() >> std::noskipws >> content;
 	}
 
 	return ;
