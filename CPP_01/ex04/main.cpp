@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 15:40:31 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/20 15:50:16 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/23 14:17:34 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 
 	Replace	sed(av[1], av[2], av[3]);
 
-	if (!sed.getBuf())
+	if (!sed.getInfile())
 	{
 		std::cout << "Error: File [" << av[1] << "] doesn't exist." << std::endl;
 		return (0);

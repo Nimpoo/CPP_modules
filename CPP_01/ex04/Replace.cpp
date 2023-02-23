@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:42:58 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/21 17:51:57 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/02/23 18:03:37 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Replace::Replace( std::string file, std::string s1, std::string s2 ) {
 
 	this->_fileReplace = file + ".replace";
 
-	this->_buf.open(file);
+	this->_infile.open(file);
 
 	return ;
 }
@@ -34,25 +34,45 @@ Replace::~Replace( void ) {
 /*-----------------------------------------*/
 
 
-std::ifstream	const &Replace::getBuf( void ) const {
-	return (this->_buf);
+std::ifstream	const &Replace::getInfile( void ) const {
+	return (this->_infile);
 }
 
-void	Replace::replaceFunction( Replace &sed ) const {
+void	Replace::replaceFunction( Replace &sed ) {
+
+	(void) sed;
 
 	std::string		content;
+	std::ofstream	writer(this->_fileReplace);
+	std::ifstream	outfile(this->_file);
 	int				i = 0;
 
-	while (sed._buf.good())
+	while (outfile.good())
 	{
-		getline(sed._buf, content, '\n');
-		if (!sed._buf.eof())
-		content += '\n';
+		getline(outfile, content, '\n');
+		if (!outfile.eof())
+			content += '\n';
+		writer.write(content.c_str(), content.size());
 		i++;
 		std::cout << "[ " << i << " ]" << std::endl;
 		std::cout << content;
-		// sed._buf.getline() >> std::noskipws >> content;
 	}
 
-	return ;
+	i = 0;
+
+	outfile.close();
+	content.clear();
+
+	if (outfile.is_open())
+	{
+		while (outfile.good())
+		{
+			getline(outfile, content, '\n');
+			i++;
+			std::cout << "[ " << i << " ]" << std::endl;
+			std::cout << content;
+		}
+	}
+
+return ;
 }
