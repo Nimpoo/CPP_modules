@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 15:40:31 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/23 14:17:34 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/25 17:28:05 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,14 @@ int	main(int ac, char **av)
 	if (ac != 4)
 	{
 		std::cout << "Error: Incorrect number of arguments." << std::endl;
+		std::cout << "Please tape : ./Sed,_c_est_pour_les_perdants <an existing file> [string to replace] [string who replace]" << std::endl;
 		return (0);
 	}
 
 
 	Replace	sed(av[1], av[2], av[3]);
 
-	if (!sed.getInfile())
-	{
-		std::cout << "Error: File [" << av[1] << "] doesn't exist." << std::endl;
-		return (0);
-	}
-
-	sed.replaceFunction(sed);
+	sed.replaceFunction();
 
 	return (0);
 }

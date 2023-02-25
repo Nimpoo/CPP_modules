@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:43:39 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/23 17:31:26 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/25 17:42:12 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ public:
 	Replace( std::string file, std::string s1, std::string s2 );
 	~Replace( void );
 
-	std::ifstream	const &getInfile( void ) const;	
-
-	void			replaceFunction( Replace &sed );
+	void	replaceFunction( void ) const;
 
 private:
 
@@ -36,8 +34,6 @@ private:
 	std::string		_s2;
 
 	std::string		_fileReplace;
-
-	std::ifstream	_infile;
 
 };
 
