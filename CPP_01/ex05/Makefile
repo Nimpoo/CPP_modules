@@ -6,7 +6,7 @@
 #    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/04 13:48:00 by mayoub            #+#    #+#              #
-#    Updated: 2023/02/14 15:52:27 by mayoub           ###   ########.fr        #
+#    Updated: 2023/02/25 17:47:10 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	Harl.cpp	\
+			main.cpp	\
 
 #OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	Harl_2.0
 
 $(NAME)	:	#$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
