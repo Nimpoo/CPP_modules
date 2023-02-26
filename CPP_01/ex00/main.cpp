@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 19:24:07 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/18 14:47:39 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/26 15:59:37 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ int	main(void)
 
 // * Annonce du Zombie DYNAMIQUE (HEAP)
 	zombieCreation->announce();
-
-// * Annonce du Zombie AUTOMATIQUE (STACK)
-	Construct.announce();
 
 // * Libération de la mémoire (qui a été allouée aà partir de la fonction newZombie() )
 	delete zombieCreation;

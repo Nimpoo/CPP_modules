@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 19:11:16 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/18 14:47:54 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/26 15:59:41 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void	Zombie::randomChump( std::string name ) {
 
 	newBorn._name = name;
 
+// * Annonce du Zombie AUTOMATIQUE (STACK)
 	newBorn.announce();
 
 	return ;
