@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 14:53:08 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/19 15:33:29 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/26 16:12:15 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void		Zombie::setName( std::string name ) {
 }
 
 // * Ici, la variable 'newBorn' est alloué DYNAMIQUEMENT dans la HEAP
-// * La variable sera utilisable en dehpors de son INSTANCE
+// * La variable sera utilisable en dehors de son INSTANCE
 Zombie	*Zombie::newZombie( std::string name ) {
 
 // ? Lorsqu'on alloue une INSTANCE de CLASS avec 'new',

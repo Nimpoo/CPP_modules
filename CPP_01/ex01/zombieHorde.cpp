@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 14:53:45 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/18 15:46:41 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/26 16:11:07 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Zombie	*zombieHorde( int N, std::string name ) {
 
 	for (int i = 0; i != N; i++) {
 		horde[i].setName(name);
-		// std::cout << horde[i].getName() << " : number [ " << i << " ]" << std::endl;
 	}
 
 	return (horde);

@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 14:51:22 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/19 15:34:15 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/02/26 16:12:27 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Zombie( void );
 	~Zombie( void );
 
-	void		announce( void ) const;
+	void		announce( void );
 
 	Zombie		*newZombie( std::string name);
 	void		randomChump( std::string name);
