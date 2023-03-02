@@ -1,0 +1,31 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    vocab.txt                                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/03/01 19:56:11 by sihemayoub        #+#    #+#              #
+#    Updated: 2023/03/02 16:16:35 by sihemayoub       ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Il existe plusieurs notations pour un calcul arithmétique :
+
+1. la notation UN-FIXE : 1 + 1
+---> l'opérant se trouve ENTRE les 2 éléments, classique
+
+2. la notation POST-FIXE ou notation POLONAISE INVERSÉE : 1 1 +
+---> l'opérants de trouve APRÈS les 2 éléments, elle sert à faire des calculs sur pile
+exemple : je push 1, je push 1, puis je les additionne
+
+3. la notation PRÉ-FIXE ou notation FONCTIONNEL: + 1 1
+---> l'opérant se trouve AVANT les 2 éléments, on utilise la FONCTION + et on prend les arguments que l'on veut additionner
+On peut aussi la noter de cette manière :
+|
+---> +( 1, 1 ), ce qui pourrait nous faire penser à une FONCTION
+
+Mais on peut aussi la noter ainsi :
+|
+---> 1.+( 1 ), ici on utilise la fonction "+" de l'INSTANCE "1"
+pour l'additionner avec "1", ce qui fait beaucoup penser à de la notation C++
