@@ -6,7 +6,7 @@
 #    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/26 15:41:36 by mayoub            #+#    #+#              #
-#    Updated: 2023/02/26 15:41:46 by mayoub           ###   ########.fr        #
+#    Updated: 2023/03/03 18:24:42 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	Fixed.cpp	\
+			main.cpp	\
 
 #OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	Maintenant,_on_peut_parler
 
 $(NAME)	:	#$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
