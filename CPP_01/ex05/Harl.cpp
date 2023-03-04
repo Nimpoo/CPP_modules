@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:51:50 by mayoub            #+#    #+#             */
-/*   Updated: 2023/02/26 15:07:19 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/04 19:32:37 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,9 @@ void	Harl::complain( std::string level ) {
 
 	void		(Harl::*ptr_functin[4]) ( void )
 				= { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
+
+	if (level.empty())
+		return ;
 
 	for (int i = 0; i < 4; i++)
 		if (levels[i] == level)
