@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:51:10 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/04 19:33:09 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/04 19:44:18 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@ int	main(void)
 	std::cout << std::endl;
 
 	Harl.complain("");
-	std::cout << std::endl;
-
-	Harl.complain(NULL);
 	std::cout << std::endl;
 
 	return (0);
