@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 10:07:33 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/03 18:11:44 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/04 19:27:23 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 const int	Fixed::_rawBits = 8;
 
 /*############# CONST / DEST ##############*/
-/*--------- DEFAULT CONSTRUCTOR -----------*/
+/*---------- DEFAULT CONSTRUCTOR ----------*/
 Fixed::Fixed( void ) : _bits( 0 ) {
 
 	std::cout << "Default constructor called" << std::endl;
@@ -84,6 +84,110 @@ int	Fixed::getRawBits( void ) const {
 
 
 /*############### OPERATORS ###############*/
+/*-------------- GREATER-THAN -------------*/
+bool	Fixed::operator>( const Fixed &other ) const {
+
+	return (this->_bits > other._bits);
+}
+/*-----------------------------------------*/
+
+/*--------------- LESS-THAN ---------------*/
+bool	Fixed::operator<( const Fixed &other ) const {
+
+	return (this->_bits < other._bits);
+}
+/*-----------------------------------------*/
+
+/*-------- GREATER-THAN OR EQUAL-TO -------*/
+bool	Fixed::operator>=( const Fixed &other ) const {
+
+	return (this->_bits >= other._bits);
+}
+/*-----------------------------------------*/
+
+/*--------- LESS-THAN OR EQUAL-TO ---------*/
+bool	Fixed::operator<=( const Fixed &other ) const {
+
+	return (this->_bits <= other._bits);
+}
+/*-----------------------------------------*/
+
+/*---------------- EQUAL TO ---------------*/
+bool	Fixed::operator==( const Fixed &other ) const {
+
+	return (this->_bits == other._bits);
+}
+/*-----------------------------------------*/
+
+/*-------------- NOT EQUAL TO -------------*/
+bool	Fixed::operator!=( const Fixed &other ) const {
+
+	return (this->_bits != other._bits);
+}
+/*-----------------------------------------*/
+
+/*--------------- ADDITION ----------------*/
+Fixed	Fixed::operator+( Fixed const &rhs ) const {
+
+	return Fixed (this->_bits + rhs.getRawBits());
+}
+/*-----------------------------------------*/
+
+/*------------- SUBSTRACTION --------------*/
+Fixed	Fixed::operator-( Fixed const &rhs ) const {
+
+	return Fixed (this->_bits - rhs.getRawBits());
+}
+/*-----------------------------------------*/
+
+/*------------ MULTIPLICATION -------------*/
+Fixed	Fixed::operator*( Fixed const &rhs ) const {
+
+	return Fixed (this->_bits * rhs.getRawBits());
+}
+/*-----------------------------------------*/
+
+/*--------------- DIVISION ----------------*/
+Fixed	Fixed::operator/( Fixed const &rhs ) const {
+
+	return Fixed (this->_bits / rhs.getRawBits());
+}
+/*-----------------------------------------*/
+
+/*---------- ADD : PRE-INCREMENT ----------*/
+Fixed	&Fixed::operator++( void ) {
+
+	++this->_bits;
+	return (*this);
+}
+/*-----------------------------------------*/
+
+/*---------- ADD : POST-INCREMENT ---------*/
+Fixed	Fixed::operator++( int increment ) {
+
+	Fixed	temp = *this;
+	this->_bits++;
+	return (temp);
+}
+/*-----------------------------------------*/
+
+/*---------- SUB : PRE-INCREMENT ----------*/
+Fixed	&Fixed::operator--( void ) {
+
+	--this->_bits;
+	return (*this);
+}
+/*-----------------------------------------*/
+
+/*---------- SUB : POST-INCREMENT ---------*/
+Fixed	Fixed::operator--( int decrement ) {
+
+	Fixed	temp = *this;
+	this->_bits--;
+	return (temp);
+}
+/*-----------------------------------------*/
+
 /*-------------- ASSIGNEMENT --------------*/
 Fixed	&Fixed::operator=( Fixed const &rhs ) {
 
@@ -119,7 +223,7 @@ Fixed	Fixed::max( Fixed &x, Fixed &y) const {
 	return (x._bits < y._bits ? y : x);
 }
 
-Fixed	Fixed::max( Fixed const &x, Fixed const &y) const {
+const Fixed	Fixed::max( Fixed const &x, Fixed const &y) const {
 
 	return (x._bits < y._bits ? y : x);
 }
@@ -129,7 +233,7 @@ Fixed	Fixed::min( Fixed &x, Fixed &y) const {
 	return (x._bits > y._bits ? y : x);
 }
 
-Fixed	Fixed::min( Fixed const &x, Fixed const &y) const {
+const Fixed	Fixed::min( Fixed const &x, Fixed const &y) const {
 
 	return (x._bits > y._bits ? y : x);
 }

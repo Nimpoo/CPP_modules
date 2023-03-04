@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 10:20:42 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/03 18:03:55 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/04 19:06:45 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,35 @@ public:
 
 	~Fixed( void );
 
-/*-------------- ASSIGNEMENT --------------*/
+/*----------- OPERATOR OVERLOAD -----------*/
 	Fixed	&operator=( Fixed const &rhs );
+	Fixed	operator+( Fixed const &rhs ) const;
+	Fixed	operator-( Fixed const &rhs ) const;
+	Fixed	operator*( Fixed const &rhs ) const;
+	Fixed	operator/( Fixed const &rhs ) const;
+	Fixed	&operator++( void );
+	Fixed	operator++( int increment );
+	Fixed	&operator--( void );
+	Fixed	operator--( int decrement );
+	bool	operator>( const Fixed &other ) const;
+	bool	operator<( const Fixed &other ) const;
+	bool	operator>=( const Fixed &other ) const;
+	bool	operator<=( const Fixed &other ) const;
+	bool	operator==( const Fixed &other ) const;
+	bool	operator!=( const Fixed &other ) const;
 
+/*--------------- ACCESSORS ---------------*/
 	void	setRawBits( int const raw );
 	int		getRawBits( void ) const;
 
 	float	toFloat( void ) const;
 	int		toInt( void ) const;
 
-	Fixed	max( Fixed &x, Fixed &y ) const;
-	Fixed	max( Fixed const &x, Fixed const &y ) const;
+	static Fixed		max( Fixed &x, Fixed &y ) const;
+	static const Fixed	max( Fixed const &x, Fixed const &y ) const;
 
-	Fixed	min( Fixed &x, Fixed &y ) const;
-	Fixed	min( Fixed const &x, Fixed const &y ) const;
+	static Fixed		min( Fixed &x, Fixed &y ) const;
+	static const Fixed	min( Fixed const &x, Fixed const &y ) const;
 
 private:
 
