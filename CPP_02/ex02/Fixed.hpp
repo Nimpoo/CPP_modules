@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 10:20:42 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/04 19:06:45 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/06 17:29:17 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ public:
 	float	toFloat( void ) const;
 	int		toInt( void ) const;
 
-	static Fixed		max( Fixed &x, Fixed &y ) const;
-	static const Fixed	max( Fixed const &x, Fixed const &y ) const;
+	static Fixed		max( Fixed &x, Fixed &y ) ;
+	static const Fixed	max( Fixed const &x, Fixed const &y ) ;
 
-	static Fixed		min( Fixed &x, Fixed &y ) const;
-	static const Fixed	min( Fixed const &x, Fixed const &y ) const;
+	static Fixed		min( Fixed &x, Fixed &y ) ;
+	static const Fixed	min( Fixed const &x, Fixed const &y ) ;
 
 private:
 
