@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 23:29:53 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/07 00:11:12 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/07 15:07:10 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,27 @@ Point::~Point( void ) {
 /*#########################################*/
 
 
+/*############### ACCESSORS ###############*/
+/*---------------- GETERS -----------------*/
+const Fixed	Point::getXCoor( void ) const {
+
+	return (this->_x);
+}
+
+const Fixed	Point::getYCoor( void ) const {
+
+	return (this->_y);
+}
+/*-----------------------------------------*/
+/*#########################################*/
+
+
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
 Point	&Point::operator=( Point const &rhs ) {
 
-	(void) rhs;
+	*(Fixed *)&this->_x = rhs.getXCoor();
+	*(Fixed *)&this->_y = rhs.getYCoor();
 
 	return (*this);
 }
@@ -58,8 +74,8 @@ Point	&Point::operator=( Point const &rhs ) {
 /*--------------- STREAM OUT --------------*/
 std::ostream	&operator<<( std::ostream &o, Point const &i ) {
 
-	(void) i;
-	return (o);
+
+	return (o << "(" << i.getXCoor() << ", " << i.getYCoor() << ")");
 }
 /*-----------------------------------------*/
 /*#########################################*/
