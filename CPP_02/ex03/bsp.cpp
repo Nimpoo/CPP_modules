@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 23:43:12 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/07 15:56:31 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/07 17:57:16 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point) {
 
 	// std::cout << first_triangle + second_triangle + third_triangle << std::endl;
 
-	if (area != (first_triangle + second_triangle + third_triangle))
+	if (area < (first_triangle + second_triangle + third_triangle))
 	{
 		std::cout << "FALSE" << std::endl;
 		return (0);
