@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 01:06:01 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/09 00:51:28 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/09 00:56:12 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	FragTrap	Mechant("Sadique");
 	FragTrap	Default;
 
-	Gentil.attack( "Sirene" );
+	Gentil.attack( "Sadique" );
 	std::cout << "[MAIN TEST] Damage stat [ " << Gentil.getAttackDamage() << " ]" << std::endl << std::endl;
 
 	std::cout << "[MAIN TEST] Hit Points stat BEFORE taking damage [ " << Gentil.getHitPoints() << " ]" << std::endl;
@@ -35,7 +35,7 @@ int	main(void)
 	std::cout << std::endl << std::endl;
 
 
-	Mechant.attack( "Sadique" );
+	Mechant.attack( "Sirene" );
 	std::cout << "[MAIN TEST] Damage stat [ " << Mechant.getAttackDamage() << " ]" << std::endl << std::endl;
 
 	std::cout << "[MAIN TEST] Hit Points stat BEFORE taking damage [ " << Default.getHitPoints() << " ]" << std::endl;
