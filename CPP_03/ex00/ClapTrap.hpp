@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 01:08:49 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/08 02:00:47 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/08 16:59:59 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ public:
 	void	attack( const std::string &target ) ;
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
+
+	unsigned int	getHitPoints( void );
+	unsigned int	getEnergyPoints( void );
+	unsigned int	getAttackDamage( void );
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	ClapTrap	&operator=( ClapTrap const &rhs );
