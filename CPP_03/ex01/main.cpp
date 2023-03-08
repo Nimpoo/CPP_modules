@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 01:06:01 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/08 18:43:15 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/09 00:55:06 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	ScavTrap	Mechant("Saturn");
 	ScavTrap	Default;
 
-	Gentil.attack( "Jack" );
+	Gentil.attack( "Saturn" );
 	std::cout << "[MAIN TEST] Damage stat [ " << Gentil.getAttackDamage() << " ]" << std::endl << std::endl;
 
 	std::cout << "[MAIN TEST] Hit Points stat BEFORE taking damage [ " << Gentil.getHitPoints() << " ]" << std::endl;
@@ -35,7 +35,7 @@ int	main(void)
 	std::cout << std::endl << std::endl;
 
 
-	Mechant.attack( "Necromantienne" );
+	Mechant.attack( "Mordecai" );
 	std::cout << "[MAIN TEST] Damage stat [ " << Mechant.getAttackDamage() << " ]" << std::endl << std::endl;
 
 	std::cout << "[MAIN TEST] Hit Points stat BEFORE taking damage [ " << Default.getHitPoints() << " ]" << std::endl;
