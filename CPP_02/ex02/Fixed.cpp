@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 10:07:33 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/06 18:57:23 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/10 17:36:29 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ Fixed	Fixed::operator++( int increment ) {
 }
 /*-----------------------------------------*/
 
-/*---------- SUB : PRE-INCREMENT ----------*/
+/*---------- SUB : PRE-DECREMENT ----------*/
 Fixed	&Fixed::operator--( void ) {
 
 	--this->_bits;
@@ -174,7 +174,7 @@ Fixed	&Fixed::operator--( void ) {
 }
 /*-----------------------------------------*/
 
-/*---------- SUB : POST-INCREMENT ---------*/
+/*---------- SUB : POST-DECREMENT ---------*/
 Fixed	Fixed::operator--( int decrement ) {
 
 	(void) decrement;
