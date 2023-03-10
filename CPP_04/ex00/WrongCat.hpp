@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 15:58:17 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:07 by mayoub           ###   ########.fr       */
+/*   Created: 2023/03/10 19:02:11 by mayoub            #+#    #+#             */
+/*   Updated: 2023/03/10 19:06:24 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include	<iostream>
+# include	"WrongAnimal.hpp"
 
-class Animal {
+class WrongCat : public WrongAnimal {
 
 public:
 
 /*------------- CONST / DEST --------------*/
-	Animal( void );
-	Animal( Animal const &src );
-	~Animal( void );
+	WrongCat( void );
+	WrongCat( WrongCat const &src );
+	~WrongCat( void );
 
 /*----------- OPERATOR OVERLOAD -----------*/
-	Animal	&operator=( Animal const &rhs );
+	WrongCat	&operator=( WrongCat const &rhs );
 
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
 
-	void virtual	makeSound( void ) const;
+	virtual void	makeSound( void ) const;
 
 protected:
 

@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 16:11:30 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:33 by mayoub           ###   ########.fr       */
+/*   Created: 2023/03/10 19:02:55 by mayoub            #+#    #+#             */
+/*   Updated: 2023/03/10 19:05:07 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Cat::Cat( void ) { this->type = "Cat"; }
+WrongCat::WrongCat( void ) { this->type = "WrongCat"; }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-Cat::Cat( Cat const &src ) {
+WrongCat::WrongCat( WrongCat const &src ) {
 
-	this->type = "Cat";
+	this->type = "WrongCat";
 	*this = src;
 }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-Cat::~Cat( void ) {}
+WrongCat::~WrongCat( void ) {}
 /*-----------------------------------------*/
 /*#########################################*/
 
 
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/
-std::string	Cat::getType ( void ) const {
+std::string	WrongCat::getType ( void ) const {
 
 	return (this->type);
 }
@@ -41,15 +41,15 @@ std::string	Cat::getType ( void ) const {
 /*#########################################*/
 
 
-void	Cat::makeSound( void ) const {
+void	WrongCat::makeSound( void ) const {
 
-	std::cout << "MIAOUUUUUUUUU !!!!! 😾" << std::endl;
+	std::cout << "BEEEEEEEEE !!!!! 🐱❌" << std::endl;
 }
 
 
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
-Cat	&Cat::operator=( Cat const &rhs ) {
+WrongCat	&WrongCat::operator=( WrongCat const &rhs ) {
 
 	(void) rhs;
 	return (*this);

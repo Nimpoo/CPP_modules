@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:58:02 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:09:05 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/10 19:03:49 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Animal::Animal( void ) : type("Default") {}
+Animal::Animal( void ) : type("WOW WTF WATH IS THIS ???") {}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
@@ -31,7 +31,19 @@ Animal::~Animal( void ) {}
 
 
 /*############### ACCESSORS ###############*/
+/*---------------- GETERS -----------------*/
+std::string	Animal::getType ( void ) const {
+
+	return (this->type);
+}
+/*-----------------------------------------*/
 /*#########################################*/
+
+
+void	Animal::makeSound( void ) const {
+
+	std::cout << "BRUH" << std::endl;
+}
 
 
 /*########### OPERATORS OVERLOAD ##########*/

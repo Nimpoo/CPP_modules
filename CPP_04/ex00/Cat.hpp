@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:09:51 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:09:32 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/10 18:58:18 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ public:
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	Cat	&operator=( Cat const &rhs );
+
+/*-------------- ACCESSORS ----------------*/
+	std::string virtual	getType( void ) const;
+
+	virtual void	makeSound( void ) const;
 
 protected:
 

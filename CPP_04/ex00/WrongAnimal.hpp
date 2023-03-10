@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 15:58:17 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:07 by mayoub           ###   ########.fr       */
+/*   Created: 2023/03/10 19:01:33 by mayoub            #+#    #+#             */
+/*   Updated: 2023/03/10 19:01:51 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include	<iostream>
 
-class Animal {
+class WrongAnimal {
 
 public:
 
 /*------------- CONST / DEST --------------*/
-	Animal( void );
-	Animal( Animal const &src );
-	~Animal( void );
+	WrongAnimal( void );
+	WrongAnimal( WrongAnimal const &src );
+	~WrongAnimal( void );
 
 /*----------- OPERATOR OVERLOAD -----------*/
-	Animal	&operator=( Animal const &rhs );
+	WrongAnimal	&operator=( WrongAnimal const &rhs );
 
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
