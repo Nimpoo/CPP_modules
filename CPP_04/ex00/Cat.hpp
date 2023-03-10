@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:09:51 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/09 16:10:54 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/10 18:09:32 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,5 @@ protected:
 	std::string	type;
 
 };
-
-/*--------------- STREAM OUT --------------*/
-std::ostream	operator<<( std::ostream &o, Cat const &i );
 
 #endif
