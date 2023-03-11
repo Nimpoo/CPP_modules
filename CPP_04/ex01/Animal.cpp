@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:15:23 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 17:06:07 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 17:49:52 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	Animal::makeSound( void ) const {
 /*-------------- ASSIGNEMENT --------------*/
 Animal	&Animal::operator=( Animal const &rhs ) {
 
-	(void) rhs;
+	this->type = rhs.type;
 	return (*this);
 }
 /*-----------------------------------------*/

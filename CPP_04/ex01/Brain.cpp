@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:18:32 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:26:44 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 17:49:01 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Brain::Brain( void ) {}
+Brain::Brain( void ) {
+
+	std::cout << "\033[1;37mBrain\033[0m was \033[1;32mCONSTRUCT\033[0m 🧠" << std::endl;
+}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-Brain::Brain( Brain const &src ) { *this = src; }
+Brain::Brain( Brain const &src ) { *this = src;
+
+	std::cout << "\033[1;37mBrain COPY\033[0m was \033[1;32mCONSTRUCT\033[0m 🧠" << std::endl;
+}
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-Brain::~Brain( void ) {}
+Brain::~Brain( void ) {
+
+	std::cout << "\033[1;37mBrain\033[0m was \033[1;32mDESTRUCT\033[0m 💥" << std::endl;
+}
 /*-----------------------------------------*/
 /*#########################################*/
 
@@ -35,7 +44,8 @@ Brain::~Brain( void ) {}
 /*-------------- ASSIGNEMENT --------------*/
 Brain	&Brain::operator=( Brain const &rhs ) {
 
-	(void) rhs;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = rhs.ideas[i];
 	return (*this);
 }
 /*-----------------------------------------*/

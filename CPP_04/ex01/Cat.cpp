@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:15:53 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 17:06:26 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 17:50:04 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	Cat::makeSound( void ) const {
 /*-------------- ASSIGNEMENT --------------*/
 Cat	&Cat::operator=( Cat const &rhs ) {
 
-	(void) rhs;
+	this->type = rhs.type;
 	return (*this);
 }
 /*-----------------------------------------*/
