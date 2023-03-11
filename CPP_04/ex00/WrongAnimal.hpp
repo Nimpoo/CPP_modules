@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 19:01:33 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 19:01:51 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 01:54:58 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 /*------------- CONST / DEST --------------*/
 	WrongAnimal( void );
 	WrongAnimal( WrongAnimal const &src );
-	~WrongAnimal( void );
+	virtual ~WrongAnimal( void );
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	WrongAnimal	&operator=( WrongAnimal const &rhs );

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:11:47 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:37 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 02:12:49 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ Dog::Dog( void ) { this->type = "Dog"; }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-Dog::Dog( Dog const &src ) {
+Dog::Dog( Dog const &src ) { *this = src;
 
 	this->type = "Dog";
-	*this = src;
 }
 /*-----------------------------------------*/
 

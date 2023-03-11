@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 19:01:00 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 19:04:25 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 02:11:04 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "WrongAnimal.hpp"
+
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-WrongAnimal::WrongAnimal( void ) : type("Is it alive ???") {}
+WrongAnimal::WrongAnimal( void ) : type("Default WrongAnimal") {}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-WrongAnimal::WrongAnimal( WrongAnimal const &src ) : type("Copy") {
-
-	*this = src;
-}
+WrongAnimal::WrongAnimal( WrongAnimal const &src ) : type("Copy") { *this = src; }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
@@ -40,7 +39,7 @@ std::string	WrongAnimal::getType ( void ) const {
 
 void	WrongAnimal::makeSound( void ) const {
 
-	std::cout << "BRUH" << std::endl;
+	std::cout << "This is the non-polymorph WrongAnimal so i don't say anything special... 🍵" << std::endl;
 }
 
 

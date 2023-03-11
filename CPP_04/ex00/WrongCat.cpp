@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 19:02:55 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 19:05:07 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 02:13:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ WrongCat::WrongCat( void ) { this->type = "WrongCat"; }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-WrongCat::WrongCat( WrongCat const &src ) {
+WrongCat::WrongCat( WrongCat const &src ) { *this = src;
 
 	this->type = "WrongCat";
-	*this = src;
 }
 /*-----------------------------------------*/
 
@@ -39,12 +38,6 @@ std::string	WrongCat::getType ( void ) const {
 }
 /*-----------------------------------------*/
 /*#########################################*/
-
-
-void	WrongCat::makeSound( void ) const {
-
-	std::cout << "BEEEEEEEEE !!!!! 🐱❌" << std::endl;
-}
 
 
 /*########### OPERATORS OVERLOAD ##########*/

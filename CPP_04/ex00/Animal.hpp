@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:58:17 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:07 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 01:55:16 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 /*------------- CONST / DEST --------------*/
 	Animal( void );
 	Animal( Animal const &src );
-	~Animal( void );
+	virtual ~Animal( void );
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	Animal	&operator=( Animal const &rhs );

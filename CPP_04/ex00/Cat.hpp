@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:09:51 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:18 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 02:10:32 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 /*------------- CONST / DEST --------------*/
 	Cat( void );
 	Cat( Cat const &src );
-	~Cat( void );
+	virtual ~Cat( void );
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	Cat	&operator=( Cat const &rhs );

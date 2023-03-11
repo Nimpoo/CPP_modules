@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:11:30 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/10 18:58:33 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 02:12:33 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ Cat::Cat( void ) { this->type = "Cat"; }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-Cat::Cat( Cat const &src ) {
+Cat::Cat( Cat const &src ) { *this = src;
 
 	this->type = "Cat";
-	*this = src;
 }
 /*-----------------------------------------*/
 
