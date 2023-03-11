@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:17:20 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:17:21 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 16:38:09 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
 
-	void virtual	makeSound( void ) const;
+	/* virtual */void	makeSound( void ) const;
 
 protected:
 

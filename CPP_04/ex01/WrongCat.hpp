@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:17:34 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:17:36 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 16:38:33 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
+
+	/* virtual */void	makeSound( void ) const;
 
 protected:
 

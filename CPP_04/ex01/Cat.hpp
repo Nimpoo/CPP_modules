@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:16:03 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:16:05 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 16:37:46 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
 
-	virtual void	makeSound( void ) const;
+	void	makeSound( void ) const;
 
 protected:
 

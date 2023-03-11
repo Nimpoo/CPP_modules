@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:17:28 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:17:30 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 16:38:49 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ std::string	WrongCat::getType ( void ) const {
 }
 /*-----------------------------------------*/
 /*#########################################*/
+
+
+void	WrongCat::makeSound( void ) const {
+
+	std::cout << "WTF i am non-polymorph, how i cry as WrongCat ?" << std::endl;
+}
 
 
 /*########### OPERATORS OVERLOAD ##########*/

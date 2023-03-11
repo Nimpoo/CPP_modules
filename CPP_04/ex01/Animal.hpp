@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:58:17 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/11 02:15:31 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 16:37:40 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
 
-	void virtual	makeSound( void ) const;
+	virtual void	makeSound( void ) const;
 
 protected:
 
