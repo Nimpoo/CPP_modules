@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:17:34 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 16:38:33 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 17:09:25 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define WRONGCAT_HPP
 
 # include	"WrongAnimal.hpp"
+
+# include	"Brain.hpp"
 
 class WrongCat : public WrongAnimal {
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:15:53 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:15:56 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 17:06:26 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,25 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Cat::Cat( void ) { this->type = "Cat"; }
+Cat::Cat( void ) { this->type = "Cat";
+
+	std::cout << "\033[1;37mCat\033[0m was \033[1;32mCONSTRUCT\033[0m 😸" << std::endl;
+}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
 Cat::Cat( Cat const &src ) { *this = src;
 
 	this->type = "Cat";
+	std::cout << "\033[1;37mCat COPY\033[0m was \033[1;32mCONSTRUCT\033[0m 😸" << std::endl;
 }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-Cat::~Cat( void ) {}
+Cat::~Cat( void ) {
+
+	std::cout << "\033[1;37mCat\033[0m was \033[1;31mDESTRUCT\033[0m 🍗" << std::endl;
+}
 /*-----------------------------------------*/
 /*#########################################*/
 

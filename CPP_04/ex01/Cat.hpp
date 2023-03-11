@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:16:03 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 16:37:46 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 17:08:19 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CAT_HPP
 
 # include	"Animal.hpp"
+
+# include	"Brain.hpp"
 
 class Cat : public Animal {
 
@@ -35,6 +37,8 @@ public:
 protected:
 
 	std::string	type;
+
+	Brain	*_brain;
 
 };
 
