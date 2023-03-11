@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 19:02:55 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/11 15:11:26 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/11 15:54:58 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ std::string	WrongCat::getType ( void ) const {
 }
 /*-----------------------------------------*/
 /*#########################################*/
+
+
+void	WrongCat::makeSound( void ) const {
+
+	std::cout << "WTF i am non-polymorph, how i cry as WrongCat ?" << std::endl;
+}
 
 
 /*########### OPERATORS OVERLOAD ##########*/
