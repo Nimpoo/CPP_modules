@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:11:47 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/11 02:12:49 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 14:59:07 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,25 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Dog::Dog( void ) { this->type = "Dog"; }
+Dog::Dog( void ) { this->type = "Dog";
+
+	std::cout << "\033[1;37mDog\033[0m was \033[1;32mCONSTRUCT\033[0m 🐶" << std::endl;
+}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
 Dog::Dog( Dog const &src ) { *this = src;
 
 	this->type = "Dog";
+	std::cout << "\033[1;37mDog COPY\033[0m was \033[1;32mCONSTRUCT\033[0m 🐶" << std::endl;
 }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-Dog::~Dog( void ) {}
+Dog::~Dog( void ) {
+
+	std::cout << "\033[1;37mDog\033[0m was \033[1;31mDESTRUCT\033[0m 🍗" << std::endl;
+}
 /*-----------------------------------------*/
 /*#########################################*/
 

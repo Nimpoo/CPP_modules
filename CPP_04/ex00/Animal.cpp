@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:58:02 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/11 02:10:45 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/11 15:02:15 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Animal::Animal( void ) : type("Default Animal") {}
+Animal::Animal( void ) : type("Default Animal") {
+
+	std::cout << "\033[1;37mDefault Animal\033[0m was \033[1;32mCONSTRUCT\033[0m 🦓" << std::endl;
+}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-Animal::Animal( Animal const &src ) : type("Copy") { *this = src; }
+Animal::Animal( Animal const &src ) : type("Copy") { *this = src;
+
+	std::cout << "\033[1;37mDefault Animal COPY\033[0m was \033[1;32mCONSTRUCT\033[0m 🦓" << std::endl;
+}
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-Animal::~Animal( void ) {}
+Animal::~Animal( void ) {
+
+	std::cout << "\033[1;37mDefault Animal\033[0m was \033[1;31mDESTRUCT\033[0m 🍗" << std::endl;
+}
 /*-----------------------------------------*/
 /*#########################################*/
 
