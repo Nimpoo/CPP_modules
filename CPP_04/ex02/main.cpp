@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:04:26 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/13 18:04:28 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/13 18:40:42 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@
 
 int	main(void)
 {
+	
+/*------------ ABSTRACT CLASS -------------*/
+/*	Animal AbstractClass;				   */
+/*-----------------------------------------*/
+
+
 	Animal	*tab[NBR_ANIMALS];
 
 	std::cout << "\033[1m-------------------- TAB ANIMAL --------------------\033[0m" << std::endl << std::endl;
@@ -94,7 +100,7 @@ int	main(void)
 
 	std::cout << "\033[1m----------------------- LEAKS ----------------------\033[0m" << std::endl << std::endl;
 
-	system("leaks Je_ne_veux_pas_brûler_le_monde");
+	system("leaks Classe_abstraite");
 
 	std::cout << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl << std::endl;
 

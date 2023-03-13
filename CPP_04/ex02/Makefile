@@ -6,7 +6,7 @@
 #    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 18:03:33 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/13 18:03:48 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/03/13 18:32:57 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC		=	Animal.cpp		\
 
 #OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	Je_ne_veux_pas_brûler_le_monde
+NAME	=	Classe_abstraite
 
 $(NAME)	:	#$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)

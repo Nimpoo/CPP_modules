@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:05:16 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/13 18:05:18 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/13 18:25:48 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
 
-	virtual void	makeSound( void ) const;
+	virtual void	makeSound( void ) const = 0;
 
 protected:
 
