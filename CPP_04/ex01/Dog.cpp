@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:16:10 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 17:57:50 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/13 17:19:54 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Dog::Dog( Dog const &src ) { *this = src;
 /*-------------- DESTRUCTOR ---------------*/
 Dog::~Dog( void ) {
 
-	std::cout << "\033[1;37mDog\033[0m was \033[1;31mDESTRUCT\033[0m 🍗" << std::endl;
+	std::cout << "\033[1;37mDog\033[0m was \033[1;31mDESTRUCT + DELETE BRAIN\033[0m 🍗" << std::endl;
 	delete this->_brain;
 }
 /*-----------------------------------------*/
@@ -44,6 +44,11 @@ Dog::~Dog( void ) {
 std::string	Dog::getType ( void ) const {
 
 	return (this->type);
+}
+
+Brain	*Dog::getBrain( void ) const {
+
+	return (this->_brain);
 }
 /*-----------------------------------------*/
 /*#########################################*/
@@ -60,6 +65,8 @@ void	Dog::makeSound( void ) const {
 Dog	&Dog::operator=( Dog const &rhs ) {
 
 	this->type = rhs.type;
+	this->_brain = new Brain(*rhs._brain);	// ? Deep copy
+	// this->_brain = rhs._brain;			// ? Shallow copy
 	return (*this);
 }
 /*-----------------------------------------*/

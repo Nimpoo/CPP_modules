@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:16:16 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 17:08:25 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/12 17:10:58 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ public:
 
 /*-------------- ACCESSORS ----------------*/
 	std::string virtual	getType( void ) const;
+	Brain	*getBrain( void ) const;
 
 	void	makeSound( void ) const;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:18:32 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 17:49:01 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/13 16:07:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 Brain::Brain( void ) {
 
 	std::cout << "\033[1;37mBrain\033[0m was \033[1;32mCONSTRUCT\033[0m 🧠" << std::endl;
+	for (size_t i = 0; i < 100; i++) {
+		this->ideas[i] = "Random idea N°[ " + std::to_string(i) + " ]";
+	}
 }
 /*-----------------------------------------*/
 
@@ -30,13 +33,25 @@ Brain::Brain( Brain const &src ) { *this = src;
 /*-------------- DESTRUCTOR ---------------*/
 Brain::~Brain( void ) {
 
-	std::cout << "\033[1;37mBrain\033[0m was \033[1;32mDESTRUCT\033[0m 💥" << std::endl;
+	std::cout << "\033[1;37mBrain\033[0m was \033[1;31mDESTRUCT\033[0m 💥" << std::endl;
 }
 /*-----------------------------------------*/
 /*#########################################*/
 
 
 /*############### ACCESSORS ###############*/
+/*---------------- GETERS -----------------*/
+std::string	Brain::getIdea( int index ) const {
+
+	return (this->ideas[ index ]);
+}
+/*-----------------------------------------*/
+/*---------------- SETERS -----------------*/
+void	Brain::setIdea( std::string idea, int index ) {
+
+	this->ideas[ index ] = idea;
+}
+/*-----------------------------------------*/
 /*#########################################*/
 
 

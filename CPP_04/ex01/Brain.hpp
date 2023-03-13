@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:18:35 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/11 02:28:18 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/13 16:07:09 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ public:
 	Brain( void );
 	Brain ( Brain const &src );
 	virtual ~Brain( void );
+
+/*-------------- ACCESSORS ----------------*/
+	std::string	getIdea( int index ) const;
+	void	setIdea( std::string ideas, int index );
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	Brain	&operator=( Brain const &rhs );
