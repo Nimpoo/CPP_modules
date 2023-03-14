@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:16:22 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/13 17:57:01 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/14 16:45:34 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(void)
 	std::cout << "\033[1;36m? \033[mModify the value of \033[1mIdea n°[ 42 ]\033[0m of \033[1;35mDobberman\033[0m to \033[1m\"I want to eat some CROCKETS\"\033[0m\033[1;36m ?\033[0m" << std::endl;
 	std::cout << "\033[1;36m???????????????????????????????????????????????????????????????????????????????????\033[0m" << std::endl << std::endl;
 
-	Dobberman.getBrain()->setIdea("I want to eat some CROCKETS", 3);
+	Dobberman.getBrain()->setIdea("I want to eat some CROCKETS", 42);
 
 	std::cout << "Idea n°[ 42 ] of \033[1;35mDobberman\033[0m :	\033[1m\" " << Dobberman.getBrain()->getIdea(42) << "\033[0m \"" << std::endl;
 	std::cout << "Idea n°[ 42 ] of \033[1;36mRottweiler\033[0m :	\033[1m\" " << Rottweiler.getBrain()->getIdea(42) << "\033[0m \"" << std::endl;
@@ -76,10 +76,10 @@ int	main(void)
 	std::cout << "\033[1;36m? \033[mModify the value of \033[1mIdea n°[ 42 ]\033[0m of \033[1;33mBengal\033[0m to \033[1m\"I want to eat some CROCKETS\"\033[0m\033[1;36m ?\033[0m" << std::endl;
 	std::cout << "\033[1;36m????????????????????????????????????????????????????????????????????????????????\033[0m" << std::endl << std::endl;
 
-	Bengal.getBrain()->setIdea("I want to eat some CROCKETS", 3);
+	Bengal.getBrain()->setIdea("I want to eat some CROCKETS", 42);
 
-	std::cout << "Idea n°[ 42 ] of \033[1;33mBengal\033[0m :	\033[1m\" " << Bengal.getBrain()->getIdea(3) << "\033[0m \"" << std::endl;
-	std::cout << "Idea n°[ 42 ] of \033[1;32mSiamois\033[0m :	\033[1m\" " << Siamois.getBrain()->getIdea(3) << "\033[0m \"" << std::endl;
+	std::cout << "Idea n°[ 42 ] of \033[1;33mBengal\033[0m :	\033[1m\" " << Bengal.getBrain()->getIdea(42) << "\033[0m \"" << std::endl;
+	std::cout << "Idea n°[ 42 ] of \033[1;32mSiamois\033[0m :	\033[1m\" " << Siamois.getBrain()->getIdea(42) << "\033[0m \"" << std::endl;
 
 	std::cout << std::endl << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl << std::endl;
 
