@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:16:22 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/14 16:45:34 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/14 18:53:32 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ int	main(void)
 
 	std::cout << "\033[1m------------------ DEEP COPY CAT 😺 ----------------\033[0m" << std::endl << std::endl;
 
-	Dog	Bengal;
+	Cat	Bengal;
 	std::cout << std::endl;
 
-	Dog	Siamois = Bengal;
+	Cat	Siamois = Bengal;
 	std::cout << std::endl;
 
 	std::cout << "Idea n°[ 42 ] of \033[1;33mBengal\033[0m :	\033[1m\" " << Bengal.getBrain()->getIdea(42) << "\033[0m \"" << std::endl;
