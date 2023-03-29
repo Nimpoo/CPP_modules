@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 23:26:54 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/07 18:43:42 by mayoub           ###   ########.fr        #
+#    Updated: 2023/03/29 18:12:50 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,15 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	ClapTrap.cpp	\
+			ScavTrap.cpp	\
+			FragTrap.cpp	\
+			DiamondTrap.cpp	\
+			main.cpp		\
 
 #OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	Ok,_ça_devient_bizarre
 
 $(NAME)	:	#$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
