@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 23:27:27 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/07 15:54:04 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/29 16:19:09 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 int	main(void)
 {
-	Point const	a( 1, 2 );
-	Point const	b( 4.6f, 4.5f );
-	Point const	c( 3.0f, 2.6f );
+	Point const	a( 1.0f, 1.0f );
+	Point const	b( 1.0f, 7.0f );
+	Point const	c( 7.0f, 1.0f );
 
-	Point const p( 5.4f, 2.7f );
+	Point const p( 3.0f, 3.0f );
 
 	bsp( a, b, c, p );
 

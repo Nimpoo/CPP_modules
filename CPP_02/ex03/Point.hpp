@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 23:31:38 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/07 14:40:37 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/29 15:30:10 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ public:
 
 	Point	&operator=( Point const &rhs );
 
-	const Fixed	getXCoor( void ) const;
-	const Fixed	getYCoor( void ) const;
+	float	getXCoor( void ) const;
+	float	getYCoor( void ) const;
 
 private:
 

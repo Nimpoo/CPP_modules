@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 23:29:53 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/07 15:07:10 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/03/29 16:18:48 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ Point::~Point( void ) {
 
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/
-const Fixed	Point::getXCoor( void ) const {
+float	Point::getXCoor( void ) const {
 
-	return (this->_x);
+	return ( this->_x.toFloat() );
 }
 
-const Fixed	Point::getYCoor( void ) const {
+float	Point::getYCoor( void ) const {
 
-	return (this->_y);
+	return ( this->_y.toFloat() );
 }
 /*-----------------------------------------*/
 /*#########################################*/
