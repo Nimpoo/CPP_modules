@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:06:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/29 18:12:04 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/31 02:22:16 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-DiamondTrap::DiamondTrap( void ) {
+DiamondTrap::DiamondTrap( void ) :
+ClapTrap( "Default DiamondTrap_clap_trap" ),
+ScavTrap( "Default DiamondTrap_scav_trap" ),
+FragTrap( "Default DiamondTrap_frag_trap" ) {
 
-    this->_name = "Default FragTrap";
-	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_damage = 30;
+	this->_name = "Default DiamondTrap";
 
 	std::cout << "\033[1mDefault DiamondTrap\033[0m is \033[1;32mconstruct\033[0m 🤖" << std::endl;
 
@@ -28,12 +28,13 @@ DiamondTrap::DiamondTrap( void ) {
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-DiamondTrap::DiamondTrap( std::string name ) {
+DiamondTrap::DiamondTrap( std::string name ) :
+ClapTrap( name + "_clap_trap" ),
+ScavTrap( name + "_clap_trap" ),
+FragTrap( name + "_clap_trap" ) {
+
 
     this->_name = name;
-	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_damage = 30;
 
 	std::cout << "Init \033[1mDiamondTrap " << _name << " \033[0m is \033[1;32mconstruc\033[0mt 🤖" << std::endl;
 
@@ -42,9 +43,13 @@ DiamondTrap::DiamondTrap( std::string name ) {
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-DiamondTrap::DiamondTrap( DiamondTrap const &src ) {
+DiamondTrap::DiamondTrap( DiamondTrap const &src ) :
+ClapTrap( src.getName() ),
+ScavTrap( src.getName() + "_scav_trap" ),
+FragTrap( src.getName() + "_clap_trap" ) {
 
 	std::cout << "\033[1mCopy DiamondTrap\033[0m is \033[1;32mconstruct\033[0m 🤖" << std::endl;
+
 	*this = src;
 
 	return ;
@@ -56,7 +61,7 @@ DiamondTrap::~DiamondTrap( void ) {
 
 	if (!this->_name.compare("Default DiamondTrap")) {
 		std::cout << "\033[1mDefault DiamondTrap\033[0m is \033[1;31mdestruct\033[0m 🛠" << std::endl;
-		return;
+		return ;
 	}
 	std::cout << "DiamondTrap \033[1m" << this->_name << "\033[0m is \033[1;31mdestruct\033[0m 🛠" << std::endl;
 
@@ -66,9 +71,17 @@ DiamondTrap::~DiamondTrap( void ) {
 /*#########################################*/
 
 
+void	DiamondTrap::whoAmI( void ) {
+
+	std::cout << "My name is : " << this->_name << std::endl;
+	std::cout << "My grand-father name is : " << ClapTrap::_name << std::endl;
+}
+
+
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/
 /*-----------------------------------------*/
+
 /*---------------- SETERS -----------------*/
 /*-----------------------------------------*/
 /*#########################################*/

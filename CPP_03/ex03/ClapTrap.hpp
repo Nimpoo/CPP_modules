@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:04:57 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/29 18:04:59 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/03/31 02:19:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ public:
 	unsigned int	getHitPoints( void );
 	unsigned int	getEnergyPoints( void );
 	unsigned int	getAttackDamage( void );
+
+/*---------------- GETERS -----------------*/
+	std::string	getName( void ) const;
 
 /*----------- OPERATOR OVERLOAD -----------*/
 	ClapTrap	&operator=( ClapTrap const &rhs );
