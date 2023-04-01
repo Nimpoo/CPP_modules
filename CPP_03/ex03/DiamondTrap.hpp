@@ -6,18 +6,17 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:06:46 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/31 01:35:47 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/01 17:57:45 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
-# include   "ClapTrap.hpp"
 # include   "FragTrap.hpp"
 # include   "ScavTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap {
+class DiamondTrap : public virtual FragTrap, public virtual ScavTrap {
 
 public:
 
@@ -38,13 +37,9 @@ private:
 
 	std::string		_name;
 
-	using FragTrap::_hit_points;
-	using ScavTrap::_energy_points;
-	using FragTrap::_attack_damage;
-
-	// unsigned int	_hit_point;	// ? FragTrap
-	// unsigned int	_energy_points;	// * ScavTrap
-	// unsigned int	_attack_damage;	// ? FragTrap
+	unsigned int	diamond_hit_points;	// ? FragTrap
+	unsigned int	diamond_energy_points;	// * ScavTrap
+	unsigned int	diamond_attack_damage;	// ? FragTrap
 
 };
 

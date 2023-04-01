@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:06:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/31 02:22:16 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/01 17:58:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-DiamondTrap::DiamondTrap( void ) :
-ClapTrap( "Default DiamondTrap_clap_trap" ),
-ScavTrap( "Default DiamondTrap_scav_trap" ),
-FragTrap( "Default DiamondTrap_frag_trap" ) {
+DiamondTrap::DiamondTrap( void ) {
 
 	this->_name = "Default DiamondTrap";
+
+	ClapTrap::_name = "Default_clap_name";
+	this->diamond_hit_points = FragTrap::_hit_points;
+	this->diamond_energy_points = ScavTrap::_energy_points;
+	this->diamond_attack_damage = FragTrap::_attack_damage;
 
 	std::cout << "\033[1mDefault DiamondTrap\033[0m is \033[1;32mconstruct\033[0m 🤖" << std::endl;
 
@@ -28,25 +30,23 @@ FragTrap( "Default DiamondTrap_frag_trap" ) {
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-DiamondTrap::DiamondTrap( std::string name ) :
-ClapTrap( name + "_clap_trap" ),
-ScavTrap( name + "_clap_trap" ),
-FragTrap( name + "_clap_trap" ) {
-
+DiamondTrap::DiamondTrap( std::string name ) {
 
     this->_name = name;
 
-	std::cout << "Init \033[1mDiamondTrap " << _name << " \033[0m is \033[1;32mconstruc\033[0mt 🤖" << std::endl;
+	ClapTrap::_name = name + "_clap_name";
+	this->diamond_hit_points = FragTrap::_hit_points;
+	this->diamond_energy_points = ScavTrap::_energy_points;
+	this->diamond_attack_damage = FragTrap::_attack_damage;
+
+	std::cout << "Init \033[1mDiamondTrap " << _name << "\033[0m is \033[1;32mconstruc\033[0mt 🤖" << std::endl;
 
 	return ;
 }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-DiamondTrap::DiamondTrap( DiamondTrap const &src ) :
-ClapTrap( src.getName() ),
-ScavTrap( src.getName() + "_scav_trap" ),
-FragTrap( src.getName() + "_clap_trap" ) {
+DiamondTrap::DiamondTrap( DiamondTrap const &src ) {
 
 	std::cout << "\033[1mCopy DiamondTrap\033[0m is \033[1;32mconstruct\033[0m 🤖" << std::endl;
 
@@ -75,6 +75,11 @@ void	DiamondTrap::whoAmI( void ) {
 
 	std::cout << "My name is : " << this->_name << std::endl;
 	std::cout << "My grand-father name is : " << ClapTrap::_name << std::endl;
+}
+
+void	DiamondTrap::attack( const std::string &target ) {
+
+	ScavTrap::attack(target);
 }
 
 

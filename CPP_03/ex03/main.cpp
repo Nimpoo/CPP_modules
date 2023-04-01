@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:06:00 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/31 02:20:53 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/01 17:59:32 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 
 int	main(void)
 {
-	DiamondTrap	test;
+	DiamondTrap	Gentil("Zero");
+	ScavTrap	Méchant("Wilhelm");
 
-	test.whoAmI();
+	Gentil.whoAmI();
+	Gentil.attack("Wilhelm");
 
 	return (0);
 }
