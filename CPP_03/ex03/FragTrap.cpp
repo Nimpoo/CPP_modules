@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 18:05:07 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/31 02:18:20 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/03/09 00:46:19 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/02 18:17:13 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ FragTrap::FragTrap( void ) {
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-FragTrap::FragTrap( std::string name ) {
+FragTrap::FragTrap( const std::string &name ) {
 
 	this->_name = name;
 	this->_hit_points = 100;
@@ -70,9 +70,23 @@ void	FragTrap::attack( const std::string &target ) {
 
 	if (!this->_name.compare("Default FragTrap"))
 	{
+		if (this->_hit_points == 0)
+		{
+			std::cout << "\033[1mDefault FragTrap\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+				<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+			
+			return ;
+		}
 		std::cout << "\033[1mDefault ClapTrap\033[0m attacks \033[1m"
 				<< target << "\033[0m, causing \033[1;31m"
 				<< this->_attack_damage << " points of damage\033[0m!" << std::endl;
+		return ;
+	}
+	if (this->_hit_points == 0)
+	{
+		std::cout << "FragTrap \033[1m" << this->_name << "\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+			<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+
 		return ;
 	}
 	std::cout << "FragTrap \033[1m" << this->_name
@@ -87,29 +101,37 @@ void	FragTrap::highFivesGuys( void ) {
 
 	if (!this->_name.compare("Default FragTrap"))
 	{
+		if (this->_hit_points == 0)
+		{
+			std::cout << "\033[1mDefault FragTrap\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+				<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+			
+			return ;
+		}
 		std::cout << "DEFAULT FRAGTRAP USE HIS SPECIAL ABILITY : HIGH FIVES GUYS" << std::endl;
 		return ;
 	}
-	std::cout << "FragTRAP \033[1;37m" << this->_name << "\033[0m USE HIS SPECIAL ABILITY : HIGH FIVES GUYS" << std::endl;
+	if (this->_hit_points == 0)
+	{
+		std::cout << "FragTrap \033[1m" << this->_name << "\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+			<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+
+		return ;
+	}
+	std::cout << "FragTrap \033[1;37m" << this->_name << "\033[0m USE HIS SPECIAL ABILITY : HIGH FIVES GUYS" << std::endl;
 
 	return ;
 }
-
-
-/*############### ACCESSORS ###############*/
-/*---------------- GETERS -----------------*/
-/*-----------------------------------------*/
-
-/*---------------- SETERS -----------------*/
-/*-----------------------------------------*/
-/*#########################################*/
 
 
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
 FragTrap	&FragTrap::operator=( FragTrap const &rhs ) {
 
-	(void) rhs;
+	this->_name = rhs._name;
+	this->_attack_damage = rhs._attack_damage;
+	this->_energy_points = rhs._energy_points;
+	this->_hit_points = rhs._hit_points;
 
 	return (*this);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 18:05:30 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/31 02:18:02 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/03/08 17:21:03 by mayoub            #+#    #+#             */
+/*   Updated: 2023/04/02 18:22:24 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ public:
 /*------------- CONST / DEST --------------*/
 	ScavTrap( void );
 	ScavTrap( ScavTrap const &src );
-	ScavTrap( std::string name );
-	~ScavTrap( void );
+	ScavTrap( const std::string &name );
+	virtual ~ScavTrap( void );
 
 	void	attack( const std::string &target );
 

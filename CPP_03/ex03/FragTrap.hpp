@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 18:05:15 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/31 02:18:06 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/03/09 00:46:17 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/02 18:22:18 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ public:
 /*------------- CONST / DEST --------------*/
 	FragTrap( void );
 	FragTrap( FragTrap const &src );
-	FragTrap( std::string name );
-	~FragTrap( void );
+	FragTrap( const std::string &name );
+	virtual ~FragTrap( void );
 
 	void	attack( const std::string &target );
 

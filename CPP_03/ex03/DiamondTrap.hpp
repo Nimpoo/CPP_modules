@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:06:46 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/01 17:57:45 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/02 18:22:09 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ public:
 
 /*------------- CONST / DEST --------------*/
 	DiamondTrap( void );
+	DiamondTrap( const std::string &name );
 	DiamondTrap( DiamondTrap const &src );
-	DiamondTrap( std::string name );
 	~DiamondTrap( void );
 
 	void	attack( const std::string &target ); // * ScavTrap

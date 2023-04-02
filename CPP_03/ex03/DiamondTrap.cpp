@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:06:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/01 17:58:02 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/02 18:21:57 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ DiamondTrap::DiamondTrap( void ) {
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-DiamondTrap::DiamondTrap( std::string name ) {
+DiamondTrap::DiamondTrap( const std::string &name ) {
 
     this->_name = name;
 
@@ -96,7 +96,10 @@ void	DiamondTrap::attack( const std::string &target ) {
 /*-------------- ASSIGNEMENT --------------*/
 DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &rhs ) {
 
-	(void) rhs;
+	this->_name = rhs._name;
+	this->_attack_damage = rhs._attack_damage;
+	this->_energy_points = rhs._energy_points;
+	this->_hit_points = rhs._hit_points;
 
 	return (*this);
 }
