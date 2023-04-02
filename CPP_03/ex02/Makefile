@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
+#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 23:26:54 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/09 00:44:33 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/02 18:10:32 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,14 @@ SRC		=	ClapTrap.cpp	\
 			FragTrap.cpp	\
 			main.cpp		\
 
-#OBJ		=	$(SRC:.cpp=.o)
+OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	Travail_à_la_chaîne
+NAME	=	Travail_à_la_chaîne
 
-$(NAME)	:	#$(OBJ)
+%.o		:	%.cpp
+			$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME)	:	$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 all		:	$(NAME)

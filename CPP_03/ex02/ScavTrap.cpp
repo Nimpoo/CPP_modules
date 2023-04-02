@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:20:39 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/08 18:40:48 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/02 18:12:47 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap( void ) {
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-ScavTrap::ScavTrap( std::string name ) {
+ScavTrap::ScavTrap( const std::string &name ) {
 
 	this->_name = name;
 	this->_hit_points = 100;
@@ -70,9 +70,27 @@ void	ScavTrap::attack( const std::string &target ) {
 
 	if (!this->_name.compare("Default ScavTrap"))
 	{
-		std::cout << "\033[1mDefault ClapTrap\033[0m attacks \033[1m"
-				<< target << "\033[0m, causing \033[1;31m"
-				<< this->_attack_damage << " points of damage\033[0m!" << std::endl;
+		if (this->_hit_points == 0)
+		{
+			std::cout << "\033[1mDefault ScavTrap\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+				<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+			
+			return ;
+		}
+		else
+		{
+			std::cout << "\033[1mDefault ScavTrap\033[0m attacks \033[1m"
+					<< target << "\033[0m, causing \033[1;31m"
+					<< this->_attack_damage << " points of damage\033[0m!" << std::endl;
+			return ;
+		}
+	}
+
+	if (this->_hit_points == 0)
+	{
+		std::cout << "ScavTrap \033[1m" << this->_name << "\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+			<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+
 		return ;
 	}
 	std::cout << "ScavTrap \033[1m" << this->_name
@@ -87,9 +105,27 @@ void	ScavTrap::guardGate( void ) {
 
 	if (!this->_name.compare("Default ScavTrap"))
 	{
-		std::cout << "DEFAULT SCAVTRAP USE HIS SPECIAL ABILITY : GUARD GATE" << std::endl;
+		if (this->_hit_points == 0)
+		{
+			std::cout << "\033[1mDefault ScavTrap\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+				<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+			
+			return ;
+		}
+		else
+		{
+			std::cout << "DEFAULT SCAVTRAP USE HIS SPECIAL ABILITY : GUARD GATE" << std::endl;
+			return ;
+		}
+	}
+	if (this->_hit_points == 0)
+	{
+		std::cout << "ClapTrap \033[1m" << this->_name << "\033[0m \033[1;31mIS FREAKING DEAD BRUH 💀\033[0m LOOK HIS Hit Points [ "
+			<< this->_hit_points << " ] ! He can't move 😔" << std::endl;
+
 		return ;
 	}
+
 	std::cout << "SCAVTRAP \033[1;37m" << this->_name << "\033[0m USE HIS SPECIAL ABILITY : GUARD GATE" << std::endl;
 
 	return ;
@@ -100,7 +136,10 @@ void	ScavTrap::guardGate( void ) {
 /*-------------- ASSIGNEMENT --------------*/
 ScavTrap	&ScavTrap::operator=( ScavTrap const &rhs ) {
 
-	(void) rhs;
+	this->_name = rhs._name;
+	this->_attack_damage = rhs._attack_damage;
+	this->_energy_points = rhs._energy_points;
+	this->_hit_points = rhs._hit_points;
 
 	return (*this);
 }

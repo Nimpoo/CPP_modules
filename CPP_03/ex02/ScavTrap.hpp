@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:21:03 by mayoub            #+#    #+#             */
-/*   Updated: 2023/03/08 18:27:08 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/02 18:11:19 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 /*------------- CONST / DEST --------------*/
 	ScavTrap( void );
 	ScavTrap( ScavTrap const &src );
-	ScavTrap( std::string name );
+	ScavTrap( const std::string &name );
 	~ScavTrap( void );
 
 	void	attack( const std::string &target );
