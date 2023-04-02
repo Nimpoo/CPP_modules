@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 01:06:01 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/08 17:17:08 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/02 18:02:58 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	ClapTrap	Gentil("Necromentinne");
+	ClapTrap	Gentil("Nécromentienne");
 	ClapTrap	Mechant("Jack");
 	ClapTrap	Default;
 
