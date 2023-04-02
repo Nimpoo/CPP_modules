@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
+#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 23:26:54 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/11 01:00:12 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/02 18:32:24 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,14 @@ SRC		=	Animal.cpp		\
 			WrongCat.cpp	\
 			main.cpp		\
 
-#OBJ		=	$(SRC:.cpp=.o)
+OBJ		=	$(SRC:.cpp=.o)
 
 NAME	=	Polymorphisme
 
-$(NAME)	:	#$(OBJ)
+%.o		:	%.cpp
+			$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME)	:	$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 all		:	$(NAME)

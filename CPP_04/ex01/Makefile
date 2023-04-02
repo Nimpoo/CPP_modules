@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
+#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 23:26:54 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/12 16:55:22 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/02 18:31:53 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,14 @@ SRC		=	Animal.cpp		\
 			Brain.cpp		\
 			main.cpp		\
 
-#OBJ		=	$(SRC:.cpp=.o)
+OBJ		=	$(SRC:.cpp=.o)
 
 NAME	=	Je_ne_veux_pas_brûler_le_monde
 
-$(NAME)	:	#$(OBJ)
+%.o		:	%.cpp
+			$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME)	:	$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 all		:	$(NAME)

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
+#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 18:03:33 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/13 18:32:57 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/02 18:30:48 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,14 @@ SRC		=	Animal.cpp		\
 			Brain.cpp		\
 			main.cpp		\
 
-#OBJ		=	$(SRC:.cpp=.o)
+OBJ		=	$(SRC:.cpp=.o)
 
 NAME	=	Classe_abstraite
 
-$(NAME)	:	#$(OBJ)
+%.o		:	%.cpp
+			$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME)	:	$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 all		:	$(NAME)
