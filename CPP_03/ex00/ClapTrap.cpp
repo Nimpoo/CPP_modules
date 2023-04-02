@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 01:07:05 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/02 18:02:26 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/02 18:05:14 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,7 +165,6 @@ void	ClapTrap::beRepaired( unsigned int amount ) {
 
 				return ;
 			}
-		
 			std::cout << "\033[1mDefault ClapTrap\033[0m was \033[1;32mrepared [ " << amount << " ] hit point\033[0m !" << std::endl;
 			this->_energy_points -= 1;
 			this->_hit_points += amount;
