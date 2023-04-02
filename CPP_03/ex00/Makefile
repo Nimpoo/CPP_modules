@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
+#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/06 23:26:54 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/03/08 01:05:21 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/02 17:39:46 by mayoub           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,14 @@ CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 SRC		=	ClapTrap.cpp	\
 			main.cpp		\
 
-#OBJ		=	$(SRC:.cpp=.o)
+OBJ		=	$(SRC:.cpp=.o)
 
 NAME	=	Eeeeet..._ACTION_!
 
-$(NAME)	:	#$(OBJ)
+%.o		:	%.cpp
+			$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME)	:	$(OBJ)
 			$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 all		:	$(NAME)

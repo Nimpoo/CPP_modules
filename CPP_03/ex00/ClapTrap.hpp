@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 01:08:49 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/08 16:59:59 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/02 17:41:17 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ public:
 /*------------- CONST / DEST --------------*/
 	ClapTrap( void );
 	ClapTrap( ClapTrap const &src );
-	ClapTrap( std::string name );
-	~ClapTrap();
+	ClapTrap( const std::string &name );
+	virtual ~ClapTrap();
 
-	void	attack( const std::string &target ) ;
+	void	attack( const std::string &target );
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
 
+/*---------------- GETERS -----------------*/
 	unsigned int	getHitPoints( void );
 	unsigned int	getEnergyPoints( void );
 	unsigned int	getAttackDamage( void );
@@ -38,7 +39,7 @@ public:
 
 private:
 
-	std::string	_name;
+	std::string		_name;
 	unsigned int	_hit_points;
 	unsigned int	_energy_points;
 	unsigned int	_attack_damage;
