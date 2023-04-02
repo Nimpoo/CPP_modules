@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:20:39 by mayoub            #+#    #+#             */
-/*   Updated: 2023/04/02 18:08:13 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/02 18:12:34 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap( void ) {
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-ScavTrap::ScavTrap( std::string name ) {
+ScavTrap::ScavTrap( const std::string &name ) {
 
 	this->_name = name;
 	this->_hit_points = 100;
