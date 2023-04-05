@@ -1,55 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 18:34:22 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/05 13:29:01 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/04/05 10:20:53 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/05 13:44:12 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Cure.hpp"
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-AMateria::AMateria( void ) : _type( "basic_materia" ) { }
-/*-----------------------------------------*/
-
-/*----------- INIT CONSTRUCTOR ------------*/
-AMateria::AMateria( std::string const &type ) : _type( type ) { }
+Cure::Cure( void ) { this->_type = "cure"; }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-AMateria::AMateria( AMateria const &src ) { *this = src; }
+Cure::Cure( Cure const &src ) { *this = src; }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-AMateria::~AMateria( void ) { }
+Cure::~Cure( void ) { }
 /*-----------------------------------------*/
 /*#########################################*/
 
 
-void	AMateria::use( ICharacter &target ) {
+AMateria	*Cure::clone( void ) const {
 
-	std::cout << "---> ABSTRACT MATERIA : " << this->_type << " is used on " << target.getName() << "." << std::endl;
+	return (new Cure());
 }
 
+void	Cure::use( ICharacter &target ) {
 
-/*############### ACCESSORS ###############*/
-/*---------------- GETERS -----------------*/
-std::string const   &AMateria::getType( void ) const { return ( this->_type ); }
-/*-----------------------------------------*/
-
-/*---------------- SETERS -----------------*/
-/*-----------------------------------------*/
-/*#########################################*/
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}
 
 
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
-AMateria    &AMateria::operator=( AMateria const &rhs ) {
+Cure	&Cure::operator=( Cure const &rhs ) {
 
 	this->_type = rhs._type;
 
@@ -58,7 +49,7 @@ AMateria    &AMateria::operator=( AMateria const &rhs ) {
 /*-----------------------------------------*/
 
 /*--------------- STREAM OUT --------------*/
-std::ostream	&operator<<( std::ostream &o, AMateria const &i ) {
+std::ostream	&operator<<( std::ostream &o, Cure const &i ) {
 
 	o << i.getType();
 

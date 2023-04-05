@@ -1,45 +1,67 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 18:34:22 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/05 13:29:01 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/04/05 10:42:37 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/05 13:45:35 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "MateriaSource.hpp"
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-AMateria::AMateria( void ) : _type( "basic_materia" ) { }
-/*-----------------------------------------*/
+MateriaSource::MateriaSource( void ) {
 
-/*----------- INIT CONSTRUCTOR ------------*/
-AMateria::AMateria( std::string const &type ) : _type( type ) { }
+	for (int i = 0; i < 4; i++)
+		this->_materia[i] = NULL;
+}
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-AMateria::AMateria( AMateria const &src ) { *this = src; }
+MateriaSource::MateriaSource( MateriaSource const &src ) { *this = src; }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-AMateria::~AMateria( void ) { }
+MateriaSource::~MateriaSource( void ) { }
 /*-----------------------------------------*/
 /*#########################################*/
 
 
-void	AMateria::use( ICharacter &target ) {
+void	MateriaSource::learnMateria( AMateria *m ) {
 
-	std::cout << "---> ABSTRACT MATERIA : " << this->_type << " is used on " << target.getName() << "." << std::endl;
+	for (int i = 0; i < 4; i++) {
+		if (this->_materia[i] == NULL)
+		{
+			_materia[i] = m;
+			return ;
+		}
+	}
+}
+
+AMateria	*MateriaSource::createMateria( std::string const & type ) {
+
+	for (int i = 0; i < 4; i++)
+		if (this->_materia[i] && this->_materia[i]->getType() == type)
+			return (this->_materia[i]->clone());
+
+	return (NULL);
 }
 
 
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/
-std::string const   &AMateria::getType( void ) const { return ( this->_type ); }
+AMateria	*MateriaSource::getMateria( std::string const & type ) {
+
+	for (int i = 0; i < 4; i++)
+		if (this->_materia[i] && this->_materia[i]->getType() == type )
+			return (this->_materia[i]);
+
+	return (NULL);
+}
 /*-----------------------------------------*/
 
 /*---------------- SETERS -----------------*/
@@ -49,18 +71,19 @@ std::string const   &AMateria::getType( void ) const { return ( this->_type ); }
 
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
-AMateria    &AMateria::operator=( AMateria const &rhs ) {
+MateriaSource	&MateriaSource::operator=( MateriaSource const &rhs ) {
 
-	this->_type = rhs._type;
+	for (int i = 0; i < 4; i++)
+		this->_materia[i] = rhs._materia[i];
 
 	return (*this);
 }
 /*-----------------------------------------*/
 
 /*--------------- STREAM OUT --------------*/
-std::ostream	&operator<<( std::ostream &o, AMateria const &i ) {
+std::ostream	&operator<<( std::ostream &o, MateriaSource const &i ) {
 
-	o << i.getType();
+	(void) i;
 
 	return (o);
 }

@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 18:42:34 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/04 11:56:57 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/04/05 10:21:00 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/05 13:47:57 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
-
-# include <iostream>
+#ifndef CURE_HPP
+# define CURE_HPP
 
 # include "AMateria.hpp"
 
-class IMateriaSource {
+class Cure : public AMateria {
 
 public:
 
-	virtual			~IMateriaSource( void ) {};
-	virtual void	learnMateria( AMateria* ) = 0;
-	virtual			AMateria* createMateria( std::string const & type ) = 0;
+/*------------- CONST / DEST --------------*/
+	Cure( void );
+	Cure( Cure const &src );
+	virtual ~Cure( void );
+
+	AMateria	*clone( void ) const;
+	void		use( ICharacter &target );
+
+/*----------- OPERATOR OVERLOAD -----------*/
+	Cure	&operator=( Cure const &rhs );
 
 };
+
+/*--------------- STREAM OUT --------------*/
+std::ostream	&operator<<( std::ostream &o, Cure const &i );
+
 
 #endif

@@ -1,51 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 18:34:25 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/05 13:48:13 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/04/05 10:35:37 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/05 13:48:45 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-# include <iostream>
+# include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-# include "ICharacter.hpp"
-
-class ICharacter;
-
-class AMateria
-{
+class MateriaSource : public IMateriaSource {
 
 public:
 
 /*------------- CONST / DEST --------------*/
-	AMateria( void );
-	AMateria( std::string const &type );
-	AMateria( AMateria const &src );
-	virtual ~AMateria( void );
+	MateriaSource( void );
+	MateriaSource( MateriaSource const &cpy );
+	virtual ~MateriaSource( void );
+
 
 /*---------------- GETERS -----------------*/
-	std::string const & getType( void ) const; //Returns the materia type
+	AMateria	*getMateria( std::string const & type );
 
-	virtual AMateria*	clone( void ) const = 0;
-	virtual void		use( ICharacter &target );
+	void		learnMateria( AMateria *m );
+	AMateria	*createMateria( std::string const & type );
 
 /*----------- OPERATOR OVERLOAD -----------*/
-	AMateria	&operator=( AMateria const &rhs );
+	MateriaSource	&operator=( MateriaSource const &rhs );
 
-protected:
+private:
 
-	std::string	_type;
+	AMateria	*_materia[4];
 
 };
 
 /*--------------- STREAM OUT --------------*/
-std::ostream	&operator<<( std::ostream &o, AMateria const &i );
+std::ostream	&operator<<( std::ostream &o, MateriaSource const &i );
 
 #endif

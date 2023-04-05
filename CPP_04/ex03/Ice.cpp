@@ -1,55 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 18:34:22 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/05 13:29:01 by sihemayoub       ###   ########.fr       */
+/*   Created: 2023/04/05 08:45:56 by sihemayoub        #+#    #+#             */
+/*   Updated: 2023/04/05 13:43:51 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Ice.hpp"
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-AMateria::AMateria( void ) : _type( "basic_materia" ) { }
-/*-----------------------------------------*/
-
-/*----------- INIT CONSTRUCTOR ------------*/
-AMateria::AMateria( std::string const &type ) : _type( type ) { }
+Ice::Ice( void ) { this->_type = "ice"; }
 /*-----------------------------------------*/
 
 /*----------- COPY CONSTRUCTOR ------------*/
-AMateria::AMateria( AMateria const &src ) { *this = src; }
+Ice::Ice( Ice const &src ) { *this = src; }
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-AMateria::~AMateria( void ) { }
+Ice::~Ice( void ) { }
 /*-----------------------------------------*/
 /*#########################################*/
 
 
-void	AMateria::use( ICharacter &target ) {
+AMateria	*Ice::clone( void ) const {
 
-	std::cout << "---> ABSTRACT MATERIA : " << this->_type << " is used on " << target.getName() << "." << std::endl;
+	return (new Ice());
 }
 
+void	Ice::use( ICharacter &target ) {
 
-/*############### ACCESSORS ###############*/
-/*---------------- GETERS -----------------*/
-std::string const   &AMateria::getType( void ) const { return ( this->_type ); }
-/*-----------------------------------------*/
-
-/*---------------- SETERS -----------------*/
-/*-----------------------------------------*/
-/*#########################################*/
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}
 
 
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
-AMateria    &AMateria::operator=( AMateria const &rhs ) {
+Ice	&Ice::operator=( Ice const &rhs ) {
 
 	this->_type = rhs._type;
 
@@ -58,7 +49,7 @@ AMateria    &AMateria::operator=( AMateria const &rhs ) {
 /*-----------------------------------------*/
 
 /*--------------- STREAM OUT --------------*/
-std::ostream	&operator<<( std::ostream &o, AMateria const &i ) {
+std::ostream	&operator<<( std::ostream &o, Ice const &i ) {
 
 	o << i.getType();
 
@@ -66,3 +57,4 @@ std::ostream	&operator<<( std::ostream &o, AMateria const &i ) {
 }
 /*-----------------------------------------*/
 /*#########################################*/
+
