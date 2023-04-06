@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 19:18:16 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/04/02 18:34:17 by mayoub           ###   ########.fr        #
+#    Updated: 2023/04/06 16:30:39 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	Bureaucrat.cpp	\
+			main.cpp		\
 
 OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	Maman,_quand_je_serai_grand,_je_serai_bureaucrate_!
 
 %.o		:	%.cpp
 			$(CC) $(CFLAGS) -c $< -o $@
