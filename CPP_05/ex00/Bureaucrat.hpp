@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:10:15 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/06 18:22:57 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/06 22:31:31 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 
 	void	upGrade( void );
 	void	downGrade( void );
+	void	exceptionCheck( void ) const;
 
 /*---------------- GETERS -----------------*/
 	std::string const	&getName( void ) const;

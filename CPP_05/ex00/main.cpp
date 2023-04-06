@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 12:52:55 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/06 18:48:23 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/06 22:49:57 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main(void)
 		std::cout << "Now, the new grade of \e[1;37mLeela\e[0m is : \e[1;35m" << High.getGrade() << "\e[0m. \e[1;32mWow great job for your increase !!!\e[0m" << std::endl;
 	}
 
-	catch(std::exception &e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
@@ -74,10 +74,10 @@ int	main(void)
 	try
 	{
 		Low.downGrade();
-		std::cout << "Now, the new grade of \e[1;37mFry\e[0m is : \e[1;35m" << High.getGrade() << "\e[0m. \e[1;31mI'm so sorry for your decrease...\e[0m" << std::endl;
+		std::cout << "Now, the new grade of \e[1;37mFry\e[0m is : \e[1;35m" << Low.getGrade() << "\e[0m. \e[1;31mI'm so sorry for your decrease...\e[0m" << std::endl;
 	}
 
-	catch(std::exception &e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
@@ -104,14 +104,43 @@ int	main(void)
 		std::cout << "Now, the new grade of \e[1;37mZoidberg\e[0m is : \e[1;35m" << Low_2.getGrade() << "\e[0m. \e[1;31mI'm so sorry for your decrease...\e[0m" << std::endl;
 	}
 
-	catch(std::exception &e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
 /*#######################################################*/
 
 
-	std::cout << "\033[1m----------------- DEFAULT DESTRUCTOR ---------------\033[0m" << std::endl << std::endl;
+
+	std::cout << "\033[1m--------------- EXCEPTION CONSTRUCTOR --------------\033[0m" << std::endl << std::endl;
+
+	std::cout << "[Keywords \e[4;34mtry\e[0m and \e[4;34mcatch\e[0m is used here]" << std::endl << std::endl;
+
+/*#######################################################*/
+	try
+	{
+		Bureaucrat	Too_High("Pr.Farnsworth", 0);
+		Bureaucrat	Too_Low("Hermes", 151);
+
+		std::cout << std::endl;
+		std::cout << "[ FIRST ]	The method \e[1;34mupGrade()\e[0m is used on \e[1;37mPr.Farnsworth\e[0m. His actual grade : \e[1;35m" << Too_High.getGrade() << "\e[0m." << std::endl;
+		std::cout << "[ SECOND ]	The method \e[1;34mdownGrade()\e[0m is used on \e[1;37mHermes\e[0m. His actual grade : \e[1;35m" << Too_Low.getGrade() << "\e[0m." << std::endl;
+
+		Too_High.upGrade();
+		Too_Low.downGrade();
+		std::cout << "Now, the new grade of \e[1;37mPr.Farnsworth\e[0m is : \e[1;35m" << Too_High.getGrade() << "\e[0m. \e[1;32mWow great job for your increase !!!\e[0m" << std::endl;
+		std::cout << "Now, the new grade of \e[1;37mHermes\e[0m is : \e[1;35m" << Too_Low.getGrade() << "\e[0m. \e[1;31mI'm so sorry for your decrease...\e[0m" << std::endl;
+
+	}
+
+	catch (const std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+/*#######################################################*/
+
+
+	std::cout << "\033[1m---------------- DEFAULT DESTRUCTOR ----------------\033[0m" << std::endl << std::endl;
 
 	return (0);
 }
