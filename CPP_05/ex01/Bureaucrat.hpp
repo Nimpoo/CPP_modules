@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:23 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 11:41:12 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/07 17:40:20 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 	void	downGrade( void );
 	void	exceptionCheck( void ) const;
 
-	void	signForm( Form const &form );	
+	void	signForm( Form &form );	
 
 /*---------------- GETERS -----------------*/
 	std::string const	&getName( void ) const;
@@ -79,3 +79,5 @@ private:
 std::ostream	&operator<<( std::ostream &o, Bureaucrat const &i );
 
 #endif
+
+class Bureaucrat;

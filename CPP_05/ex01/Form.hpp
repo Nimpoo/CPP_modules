@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:23:50 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 11:38:57 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/07 17:54:25 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ class Form {
 public:
 
 /*------------- CONST / DEST --------------*/
-	Form( void );
-	Form( std::string const &name );
+	Form( std::string const &name, int const &gradeSign, int const &gardeExec );
 	Form( Form const &src );
 	virtual ~Form( void );
 
@@ -43,14 +42,6 @@ public:
 
 
 /*############### EXCEPTIONS ##############*/
-	class GradeTooHighException : public std::exception {
-
-	public:
-
-		virtual const char *what() const throw();
-
-	};
-
 	class GradeTooLowException : public std::exception {
 
 	public:
@@ -59,10 +50,17 @@ public:
 
 	};
 
+	class FormGradeNotNorm : public std::exception {
+
+		virtual const char *what() const throw();
+
+	};
 /*#########################################*/
 
 
 private:
+
+	Form( void );
 
 	std::string const	_name;
 	int const			_gradeSign;
@@ -75,3 +73,5 @@ private:
 std::ostream	&operator<<( std::ostream &o, Form const &i );
 
 #endif
+
+class Form;

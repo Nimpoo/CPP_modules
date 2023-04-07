@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 08:13:31 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 11:43:50 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/07 17:54:54 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,34 @@
 
 /*############# CONST / DEST ##############*/
 /*---------- DEFAULT CONSTRUCTOR ----------*/
-Form::Form( void ) : _name( "Form" ), _gradeSign( 5 ), _gradeExec( 4 ), _signed( false ) {
+Form::Form( void ) :
+_name( "Form" ),
+_gradeSign( 5 ),
+_gradeExec( 4 ),
+_signed( false ) {
 
+	std::cout << "\e[1m* WHOOSH 🖨  *\e[0m The DEFAULT printer \e[1;32mprinted a new Form\e[0m \e[1;37m" << this->_name << "\e[0m with \e[1;35m" << this->_gradeSign << " grade to SIGN\e[0m and \e[1;36m" << this->_gradeExec << " grade to EXEC\e[0m 📑" << std::endl;
 
+	if (this->_gradeSign > 150 || this->_gradeSign < 1)
+		throw FormGradeNotNorm();
+	if (this->_gradeExec > 150 || this->_gradeExec < 1)
+		throw FormGradeNotNorm();
 }
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-Form::Form( std::string const &name) : _name( name ), _gradeSign( 5 ), _gradeExec( 4 ), _signed( false ) {
+Form::Form( std::string const &name, int const &gradeSign, int const &gradeExec ) :
+_name( name ),
+_gradeSign( gradeSign ),
+_gradeExec( gradeExec ),
+_signed( false ) {
 
+	std::cout << "\e[1m* WHOOSH 🖨  *\e[0m The printer \e[1;32mprinted a new Form\e[0m \e[1;37m" << this->_name << "\e[0m with \e[1;35m" << this->_gradeSign << " grade to SIGN\e[0m and \e[1;36m" << this->_gradeExec << " grade to EXEC\e[0m 📑" << std::endl;
 
+	if (this->_gradeSign > 150 || this->_gradeSign < 1)
+		throw FormGradeNotNorm();
+	if (this->_gradeExec > 150 || this->_gradeExec < 1)
+		throw FormGradeNotNorm();
 }
 /*-----------------------------------------*/
 
@@ -32,22 +50,33 @@ Form::Form( Form const &src ) :
 _name( src._name ),
 _gradeSign( src._gradeSign ),
 _gradeExec( src._gradeExec ),
-_signed( src._signed )
-{ }
+_signed( src._signed ) {
+
+	std::cout << "\e[1m* WHOOSH 🖨  *\e[0m The COPY printer \e[1;32mprinted a new Form\e[0m \e[1;37m" << this->_name << "\e[0m with \e[1;35m" << this->_gradeSign << " grade to SIGN\e[0m and \e[1;36m" << this->_gradeExec << " grade to EXEC\e[0m 📑" << std::endl;
+
+	if (this->_gradeSign > 150 || this->_gradeSign < 1)
+		throw FormGradeNotNorm();
+	if (this->_gradeExec > 150 || this->_gradeExec < 1)
+		throw FormGradeNotNorm();
+}
 /*-----------------------------------------*/
 
 /*-------------- DESTRUCTOR ---------------*/
-Form::~Form( void ) { }
+Form::~Form( void ) {
+
+	std::cout << "Look, I got a three point with he form \e[1;37m" << this->_name <<"\e[0m in the \e[1;31mTRASH CAN\e[0m ! 🗑" << std::endl;
+}
 /*-----------------------------------------*/
 /*#########################################*/
 
 
 void	Form::beSigned( Bureaucrat const &employee ) {
 
+	exceptionCheck(employee);
 	if (this->_signed != true)
 	{
 		this->_signed = true;
-		std::cout << "This Form is now signed !" << std::endl;
+		std::cout << employee.getName() << " signed " << this->_name << std::endl;
 	}
 	else
 		std::cout << "This Form is already signed." << std::endl;
@@ -55,20 +84,21 @@ void	Form::beSigned( Bureaucrat const &employee ) {
 
 void	Form::exceptionCheck( Bureaucrat const &employee ) const {
 
-	if (employee.getGrade() < this->_gradeSign)
-		throw GradeTooLowException();
 	if (employee.getGrade() > this->_gradeSign)
-		throw GradeTooHighException();
+		throw GradeTooLowException();
 }
 
 
-const char	*Form::GradeTooHighException::what() const throw() {
-	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO HIGH\e[0m");
-}
-
+/*############### EXCEPTIONS ##############*/
 const char	*Form::GradeTooLowException::what() const throw() {
-	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO LOW\e[0m");
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO LOW FOR SIGN\e[0m\n\n\033[1m----------------------------------------------------\033[0m\n\n");
 }
+
+const char  *Form::FormGradeNotNorm::what() const throw() {
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade of the form \e[1;37mISN'T NORMED\e[0m");
+}
+/*#########################################*/
+
 
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/

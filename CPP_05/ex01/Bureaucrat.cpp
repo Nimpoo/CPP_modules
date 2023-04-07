@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:14 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 11:43:03 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/07 17:40:15 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ void	Bureaucrat::exceptionCheck( void ) const {
 		throw GradeTooHighException();
 }
 
-void	Bureaucrat::signForm( Form const &form ) {
+void	Bureaucrat::signForm( Form &form ) {
 
-	form.getSigned();
+	form.beSigned( *this );
 }
 
 /*############### ACCESSORS ###############*/
