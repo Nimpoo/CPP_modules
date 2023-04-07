@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 12:52:55 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/06 22:49:57 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 11:08:36 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	main(void)
 
 
 
-	std::cout << "\033[1m------------ OVER-DOWNGRADE EXCEPTION CATCH ------------\033[0m" << std::endl << std::endl;
+	std::cout << "\033[1m---------- OVER-DOWNGRADE EXCEPTION CATCH ----------\033[0m" << std::endl << std::endl;
 
 	Bureaucrat	Low("Fry", 150);
 
