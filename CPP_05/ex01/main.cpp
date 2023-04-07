@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:18:36 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 23:01:15 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 23:23:56 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,11 @@ int	main(void)
 	try
 	{
 		Too_Low.signForm(Paper_1);
+		std::cout << std::endl;
 	}
 	catch (const std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << std::endl << std::endl;
 	}
 /*#######################################################*/
 
@@ -72,7 +73,7 @@ int	main(void)
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << e.what() << std::endl << std::endl;;
+		std::cerr << e.what() << std::endl << std::endl;
 	}
 /*#######################################################*/
 
@@ -83,7 +84,7 @@ int	main(void)
 	}
 	catch (const std::exception &e)
 	{
-		std::cout << e.what() << std::endl << std::endl;;
+		std::cout << e.what() << std::endl << std::endl;
 	}
 /*#######################################################*/
 

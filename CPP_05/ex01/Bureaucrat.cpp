@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:14 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 17:40:15 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 23:26:32 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,21 @@ void	Bureaucrat::exceptionCheck( void ) const {
 
 void	Bureaucrat::signForm( Form &form ) {
 
-	form.beSigned( *this );
+	if (form.getSigned())
+	{
+		std::cout << "This Form is already signed." << std::endl;
+		return;
+	}
+	if (this->_grade < form.getGradeSign() )
+	{
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
+		form.beSigned( *this );
+	}
+	else
+	{
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because the grade is not reach." << std::endl;
+		throw GradeTooLowException();
+	}
 }
 
 /*############### ACCESSORS ###############*/

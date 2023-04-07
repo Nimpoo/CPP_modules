@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 08:13:31 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 22:58:03 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 23:26:11 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,7 @@ void	Form::beSigned( Bureaucrat const &employee ) {
 
 	exceptionCheck(employee);
 	if (this->_signed != true)
-	{
 		this->_signed = true;
-		std::cout << employee.getName() << " signed " << this->_name << std::endl;
-	}
-	else
-		std::cout << "This Form is already signed." << std::endl;
 }
 
 void	Form::exceptionCheck( Bureaucrat const &employee ) const {
