@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:23 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/06 23:14:31 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 11:41:12 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <exception>
 # include <stdexcept>
+
+# include "Form.hpp"
 
 class Bureaucrat {
 
@@ -30,6 +32,8 @@ public:
 	void	upGrade( void );
 	void	downGrade( void );
 	void	exceptionCheck( void ) const;
+
+	void	signForm( Form const &form );	
 
 /*---------------- GETERS -----------------*/
 	std::string const	&getName( void ) const;

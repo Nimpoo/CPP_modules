@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:23:50 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 08:17:32 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 11:38:57 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define FORM_HPP
 
 # include <iostream>
+# include <exception>
+# include <stdexcept>
+
+# include "Bureaucrat.hpp"
 
 class Form {
 
@@ -25,6 +29,39 @@ public:
 	Form( Form const &src );
 	virtual ~Form( void );
 
+	void	beSigned( Bureaucrat const &employee );
+	void	exceptionCheck( Bureaucrat const &employee ) const;
+
+/*---------------- GETERS -----------------*/
+	std::string const	&getName( void ) const;
+	int	const			&getGradeSign( void ) const;
+	int	const			&getGradeExec( void ) const;
+	bool const			&getSigned( void ) const;
+
+/*----------- OPERATORS OVERLOAD ----------*/
+	Form	&operator=( Form const &rhs );
+
+
+/*############### EXCEPTIONS ##############*/
+	class GradeTooHighException : public std::exception {
+
+	public:
+
+		virtual const char *what() const throw();
+
+	};
+
+	class GradeTooLowException : public std::exception {
+
+	public:
+
+		virtual const char *what() const throw();
+
+	};
+
+/*#########################################*/
+
+
 private:
 
 	std::string const	_name;
@@ -33,5 +70,8 @@ private:
 	bool				_signed;
 
 };
+
+/*--------------- STREAM OUT --------------*/
+std::ostream	&operator<<( std::ostream &o, Form const &i );
 
 #endif
