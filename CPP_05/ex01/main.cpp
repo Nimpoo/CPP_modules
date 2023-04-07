@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:18:36 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 18:33:47 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 23:01:15 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void)
 	{
 		Over_Sign.signForm(Paper_0);
 	}
-	catch (const std::exception& e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
@@ -56,7 +56,7 @@ int	main(void)
 	{
 		Too_Low.signForm(Paper_1);
 	}
-	catch (const std::exception& e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
@@ -70,7 +70,7 @@ int	main(void)
 	{
 		Form	Too_High_Grade("Tableur", 151, 1);
 	}
-	catch (const std::exception& e)
+	catch (const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl << std::endl;;
 	}
@@ -81,7 +81,7 @@ int	main(void)
 	{
 		Form	Too_Low_Grade("Certificate", 0, 1);
 	}
-	catch (const std::exception& e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl << std::endl;;
 	}

@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:23:50 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 17:54:25 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 23:00:50 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FORM_HPP
 
 # include <iostream>
+# include <memory>
 # include <exception>
 # include <stdexcept>
 
@@ -24,7 +25,7 @@ class Form {
 public:
 
 /*------------- CONST / DEST --------------*/
-	Form( std::string const &name, int const &gradeSign, int const &gardeExec );
+	Form( std::string const &name, int const &gradeSign, int const &gradeExec );
 	Form( Form const &src );
 	virtual ~Form( void );
 

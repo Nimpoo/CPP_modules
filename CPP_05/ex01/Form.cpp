@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 08:13:31 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 17:54:54 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/07 22:58:03 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ _signed( src._signed ) {
 /*-------------- DESTRUCTOR ---------------*/
 Form::~Form( void ) {
 
-	std::cout << "Look, I got a three point with he form \e[1;37m" << this->_name <<"\e[0m in the \e[1;31mTRASH CAN\e[0m ! 🗑" << std::endl;
+	std::cout << "Look, I got a three points with he form \e[1;37m" << this->_name <<"\e[0m in the \e[1;31mTRASH CAN\e[0m ! 🗑" << std::endl;
 }
 /*-----------------------------------------*/
 /*#########################################*/
@@ -132,7 +132,7 @@ Form    &Form::operator=( Form const &rhs ) {
 /*--------------- STREAM OUT --------------*/
 std::ostream	&operator<<( std::ostream &o, Form const &i ) {
 
-	(void) i;
+	o << "The \e[1;37m" << i.getName() << "\e[0m need a \e[1;37mBureaucrat\e[0m with \e[1;35m" << i.getGradeSign() << "grade to be signed\e[0m and \e[1;36m" << i.getGradeExec() << "to be execute\e[0m." << std::endl;
 
 	return (o);
 }
