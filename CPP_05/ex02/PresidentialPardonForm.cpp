@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 23:33:42 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/08 17:54:33 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 19:52:32 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ PresidentialPardonForm::~PresidentialPardonForm( void ) { }
 
 void	PresidentialPardonForm::execute( Bureaucrat const &executor ) const {
 
+	std::cout << executor.getName() << " executed " << getName() << std::endl;
 	std::cout << "The Galactic President, \e[4;34mZaphod Beeblebrox\e[0m, \e[1;32mACCEPT\e[0m the forgiveness of \e[1;37m" << executor.getName() << "\e[0m 🪐." << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 23:33:52 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/08 16:48:28 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 19:52:20 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ void	RobotomyRequestForm::execute( Bureaucrat const &executor ) const {
 
 	srand(time(0));
 	int	fifty_pourcent = rand() % 2;
-	std::cout << fifty_pourcent << std::endl;
+
+	std::cout << executor.getName() << " executed " << getName() << std::endl;
 
 	std::cout << "\e[1;37m👷 * RIIIIZZZZZZZzzzzzz... BZZZZZZZZZZzzzzzz... * 👷‍♂️\e[0m, WOW this Form for try to robotomize \e[1;37m" << executor.getName() << "\e[0m make some noise or what 😂😂😭" << std::endl;
 	if (fifty_pourcent == 1)
