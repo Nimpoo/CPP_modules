@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:14 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 23:26:32 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 09:34:55 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,15 +90,9 @@ void	Bureaucrat::signForm( Form &form ) {
 
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/
-std::string const	&Bureaucrat::getName( void ) const {
+std::string const	&Bureaucrat::getName( void ) const { return ( this->_name ); }
 
-	return ( this->_name );
-}
-
-int const	&Bureaucrat::getGrade( void ) const {
-
-	return ( this->_grade );
-}
+int const	&Bureaucrat::getGrade( void ) const { return ( this->_grade ); }
 /*-----------------------------------------*/
 
 /*---------------- SETERS -----------------*/
