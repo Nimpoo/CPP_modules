@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:18:36 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 23:23:56 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 09:32:28 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ int	main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << std::endl;
+
+	std::cout << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl << std::endl;
+
 
 	std::cout << "\033[1m--------------- SIGN METHOD | TOO LOW --------------\033[0m" << std::endl << std::endl;
 
