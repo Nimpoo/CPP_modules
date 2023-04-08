@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:23:50 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 23:00:50 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 09:27:00 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ public:
 
 	};
 
-	class FormGradeNotNorm : public std::exception {
+	class GradeTooHighException : public std::exception {
 
 		virtual const char *what() const throw();
 

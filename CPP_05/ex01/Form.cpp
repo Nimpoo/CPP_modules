@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 08:13:31 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 23:26:11 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 09:29:54 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ _signed( false ) {
 
 	std::cout << "\e[1m* WHOOSH 🖨  *\e[0m The DEFAULT printer \e[1;32mprinted a new Form\e[0m \e[1;37m" << this->_name << "\e[0m with \e[1;35m" << this->_gradeSign << " grade to SIGN\e[0m and \e[1;36m" << this->_gradeExec << " grade to EXEC\e[0m 📑" << std::endl;
 
-	if (this->_gradeSign > 150 || this->_gradeSign < 1)
-		throw FormGradeNotNorm();
-	if (this->_gradeExec > 150 || this->_gradeExec < 1)
-		throw FormGradeNotNorm();
+	if (this->_gradeSign > 150 || this->_gradeExec > 150)
+		throw GradeTooLowException();
+	if ( this->_gradeSign < 1 || this->_gradeExec < 1)
+		throw GradeTooHighException();
 }
 /*-----------------------------------------*/
 
@@ -38,10 +38,10 @@ _signed( false ) {
 
 	std::cout << "\e[1m* WHOOSH 🖨  *\e[0m The printer \e[1;32mprinted a new Form\e[0m \e[1;37m" << this->_name << "\e[0m with \e[1;35m" << this->_gradeSign << " grade to SIGN\e[0m and \e[1;36m" << this->_gradeExec << " grade to EXEC\e[0m 📑" << std::endl;
 
-	if (this->_gradeSign > 150 || this->_gradeSign < 1)
-		throw FormGradeNotNorm();
-	if (this->_gradeExec > 150 || this->_gradeExec < 1)
-		throw FormGradeNotNorm();
+	if (this->_gradeSign > 150 || this->_gradeExec > 150)
+		throw GradeTooLowException();
+	if ( this->_gradeSign < 1 || this->_gradeExec < 1)
+		throw GradeTooHighException();
 }
 /*-----------------------------------------*/
 
@@ -54,10 +54,10 @@ _signed( src._signed ) {
 
 	std::cout << "\e[1m* WHOOSH 🖨  *\e[0m The COPY printer \e[1;32mprinted a new Form\e[0m \e[1;37m" << this->_name << "\e[0m with \e[1;35m" << this->_gradeSign << " grade to SIGN\e[0m and \e[1;36m" << this->_gradeExec << " grade to EXEC\e[0m 📑" << std::endl;
 
-	if (this->_gradeSign > 150 || this->_gradeSign < 1)
-		throw FormGradeNotNorm();
-	if (this->_gradeExec > 150 || this->_gradeExec < 1)
-		throw FormGradeNotNorm();
+	if (this->_gradeSign > 150 || this->_gradeExec > 150)
+		throw GradeTooLowException();
+	if ( this->_gradeSign < 1 || this->_gradeExec < 1)
+		throw GradeTooHighException();
 }
 /*-----------------------------------------*/
 
@@ -86,11 +86,11 @@ void	Form::exceptionCheck( Bureaucrat const &employee ) const {
 
 /*############### EXCEPTIONS ##############*/
 const char	*Form::GradeTooLowException::what() const throw() {
-	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO LOW FOR SIGN\e[0m\n\n\033[1m----------------------------------------------------\033[0m\n\n");
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade of the form \e[1;37mTOO LOW FOR BE SIGNED\e[0m");
 }
 
-const char  *Form::FormGradeNotNorm::what() const throw() {
-	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade of the form \e[1;37mISN'T NORMED\e[0m");
+const char  *Form::GradeTooHighException::what() const throw() {
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade of the form \e[1;37mTOO HIGH FOR BE SIGNED\e[0m");
 }
 /*#########################################*/
 
