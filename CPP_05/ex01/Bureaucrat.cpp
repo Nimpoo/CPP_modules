@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:14 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/07 23:26:32 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/08 17:21:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	Bureaucrat::signForm( Form &form ) {
 		std::cout << "This Form is already signed." << std::endl;
 		return;
 	}
-	if (this->_grade < form.getGradeSign() )
+	if (this->_grade <= form.getGradeSign() )
 	{
 		std::cout << this->_name << " signed " << form.getName() << std::endl;
 		form.beSigned( *this );
