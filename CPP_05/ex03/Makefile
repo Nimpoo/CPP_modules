@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 19:18:38 by sihemayoub        #+#    #+#              #
-#    Updated: 2023/04/02 18:34:36 by mayoub           ###   ########.fr        #
+#    Updated: 2023/04/08 19:56:46 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,17 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	Bureaucrat.cpp				\
+			Form.cpp					\
+			ShrubberyCreationForm.cpp	\
+			RobotomyRequestForm.cpp		\
+			PresidentialPardonForm.cpp	\
+			Intern.cpp					\
+			main.cpp					\
 
 OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	C’est_toujours_mieux_que_d’apporter_le_café
 
 %.o		:	%.cpp
 			$(CC) $(CFLAGS) -c $< -o $@
