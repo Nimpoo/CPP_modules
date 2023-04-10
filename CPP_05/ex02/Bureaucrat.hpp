@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 23:30:06 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/08 16:35:16 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/10 13:21:26 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ public:
 	void	exceptionCheck( void ) const;
 
 	void	signForm( Form &form );	
-	void	executeForm( Form &form );
+	void	executeForm( Form const &form );
 
 /*---------------- GETERS -----------------*/
 	std::string const	&getName( void ) const;

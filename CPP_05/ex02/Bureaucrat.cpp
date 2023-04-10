@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 23:29:40 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/08 17:20:31 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/10 13:21:33 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	Bureaucrat::signForm( Form &form ) {
 	}
 }
 
-void	Bureaucrat::executeForm( Form &form ) {
+void	Bureaucrat::executeForm( Form const &form ) {
 
 	if (!form.getSigned())
 		throw Form::FormNotSignedException();
