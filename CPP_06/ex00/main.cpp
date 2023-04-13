@@ -6,16 +6,11 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/11 18:08:25 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/13 08:38:26 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-void	parsArg( std::string const &arg ) {
-
-	
-}
 
 int	main(int ac, char **av)
 {
@@ -26,7 +21,11 @@ int	main(int ac, char **av)
 		return (1);
 	}
 
-	parsArg( std::string(av[1]) );
+	std::string arg(av[1]);
+
+	bool	nbr = false;
+	bool	point = false;
+	bool	flt = false;
 
 	
 
