@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 23:41:58 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/05 13:59:22 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/16 16:58:53 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void    Character::unequip( int idx ) {
 
 	if (this->_inventory[idx])
 	{
-		std::cout << "[ " << this->_name << " ]	>> " << "the MATERIA : " << this->_inventory[idx]->getType() << "is unequip." << std::endl;
+		std::cout << "[ " << this->_name << " ]	>> " << "the MATERIA : " << this->_inventory[idx]->getType() << " is UNEQUIP." << std::endl;
 		this->_inventory[idx] = NULL;
 	}
 	else
