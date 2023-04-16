@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/16 16:32:26 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/16 17:36:43 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,14 @@ void	parseFloat( double floater ) {
 
 void	parseInt( std::string integer ) {
 
-	(void) integer
+	int const	cast = static_cast<int>(integer.c_str()[0]);
+
+	if (integer.size() != 1 && !isNumber(integer))
+		std::cout << "int: impossible" << std::endl;
+	else if (!isNumber(integer))
+		std::cout << "int: " << cast << std::endl;
+	else
+		std::cout << "int: " << atoi(integer.c_str()) << std::endl;
 }
 
 void	parseChar( std::string character ) {
@@ -42,11 +49,11 @@ void	parseChar( std::string character ) {
 
 	if (((atoi(cast) > 126 && atoi(cast) < 0)) || (character.size() != 1 && !isNumber(character)))
 		std::cout << "char: impossible" << std::endl;
-	else if (character.size() == 1 && !isNumber(character))
+	else if (character.size() == 1 && !isNumber(character) && (atoi(cast) > 32 && atoi(cast) < 127))
 		std::cout << "char: '" << cast << "'" << std::endl;
 	else
 	{
-		if (atoi(cast) > 32 && atoi(cast) < 126)
+		if (atoi(cast) > 32 && atoi(cast) < 127)
 			std::cout << "char: '" << static_cast<char>(atoi(cast)) << "'" << std::endl;
 		else
 			std::cout << "char: Non displayable" << std::endl;
