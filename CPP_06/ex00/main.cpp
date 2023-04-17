@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/17 18:19:40 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/17 18:54:26 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 bool	isNumber( const std::string &s )
 {
 	for (int i = 0; s[i]; i++) {
-		if ((s[i] == '-' && i == 0) || (s[i] == '+' && i == 0))
+		if ((s[i] == '-' && i == 0) || (s[i] == '+' && i == 0) || (s[i] == '.'))
 			i++;
 		if (std::isdigit(s[i]) == 0)
 			return false;
@@ -30,13 +30,13 @@ void	parseDouble( std::string real ) {
 	double const	cast = static_cast<double>(real.c_str()[0]);
 
 	if (real.size() != 1 && atof(real.c_str()) < 0 && isNumber(real))
-		std::cout << std::fixed << std::setprecision(1) << "double: " << atof(real.c_str()) << std::endl;
+		std::cout << std::fixed << "double: " << atof(real.c_str()) << std::endl;
 	else if (real.size() != 1 && !isNumber(real))
 		std::cout << "double: impossible" << std::endl;
 	else if (!isNumber(real))
-		std::cout << std::fixed << std::setprecision(1) << "double: " << cast << std::endl;
+		std::cout << std::fixed << "double: " << cast << std::endl;
 	else
-		std::cout << std::fixed << std::setprecision(1) << "double: " << atof(real.c_str()) << std::endl;
+		std::cout << std::fixed << "double: " << atof(real.c_str()) << std::endl;
 }
 
 void	parseFloat( std::string floater ) {
@@ -44,13 +44,13 @@ void	parseFloat( std::string floater ) {
 	float const	cast = static_cast<float>(floater.c_str()[0]);
 
 	if (floater.size() != 1 && atof(floater.c_str()) < 0 && isNumber(floater))
-		std::cout << std::fixed << std::setprecision(1) << "float: " << atof(floater.c_str()) << "f" << std::endl;
+		std::cout << std::fixed << "float: " << atof(floater.c_str()) << "f" << std::endl;
 	else if (floater.size() != 1 && !isNumber(floater))
 		std::cout << "float: impossible" << std::endl;
 	else if (!isNumber(floater))
-		std::cout << std::fixed << std::setprecision(1) << "float: " << cast << "f" << std::endl;
+		std::cout << std::fixed << "float: " << cast << "f" << std::endl;
 	else
-		std::cout << std::fixed << std::setprecision(1) << "float: " << atof(floater.c_str()) << "f" << std::endl;
+		std::cout << std::fixed << "float: " << atof(floater.c_str()) << "f" << std::endl;
 }
 
 void	parseInt( std::string integer ) {
@@ -127,11 +127,11 @@ int	main(int ac, char **av)
 		else parseInt( string_av ); 
 
 		if (flt && nbr && !point && !chr) parseFloat( string_av.substr(0, string_av.size() - 1) );
-		else if ((!flt && nbr && point && !chr) || (flt && nbr && point && !chr)) parseFloat( string_av.substr(0, string_av.find_first_of('.')) );
+		else if ((!flt && nbr && point && !chr) || (flt && nbr && point && !chr)) parseFloat( string_av.substr(0, string_av.size()) );
 		else parseFloat( string_av );
 
 		if (flt && nbr && !point && !chr) parseDouble( string_av.substr(0, string_av.size() - 1) );
-		else if ((!flt && nbr && point && !chr) || (flt && nbr && point && !chr)) parseDouble( string_av.substr(0, string_av.find_first_of('.')) );
+		else if ((!flt && nbr && point && !chr) || (flt && nbr && point && !chr)) parseDouble( string_av.substr(0, string_av.size()) );
 		else parseDouble( string_av );
 	}
 	return (0);
