@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/17 13:17:20 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/17 13:54:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,23 @@ bool	isNumber( const std::string &s )
 	return true;
 }
 
-void	parseDouble( double real ) {
+void	parseDouble( std::string real ) {
 
-	(void) real;
+	double const	cast = static_cast<double>(real.c_str()[0]);
+
+	if (real.size() != 1 && !isNumber(real))
+		std::cout << "double: impossible" << std::endl;
+	else if (!isNumber(real))
+		std::cout << std::fixed << std::setprecision(1) << "double: " << cast << std::endl;
+	else
+		std::cout << std::fixed << std::setprecision(1) << "double: " << atof(real.c_str()) << std::endl;
 }
 
 void	parseFloat( std::string floater ) {
 
 	float const	cast = static_cast<float>(floater.c_str()[0]);
 
-	if (floater.size() != 1)
+	if (floater.size() != 1 && !isNumber(floater))
 		std::cout << "float: impossible" << std::endl;
 	else if (!isNumber(floater))
 		std::cout << std::fixed << std::setprecision(1) << "float: " << cast << "f" << std::endl;
@@ -113,7 +120,10 @@ int	main(int ac, char **av)
 		if (flt && nbr && !point && !chr) parseFloat( string_av.substr(0, string_av.size() - 1) );
 		else if ((!flt && nbr && point && !chr) || (flt && nbr && point && !chr)) parseFloat( string_av.substr(0, string_av.find_first_of('.')) );
 		else parseFloat( string_av );
-		// if ( nbr && point ) parseDouble( atof(av[1]) );
+
+		if (flt && nbr && !point && !chr) parseDouble( string_av.substr(0, string_av.size() - 1) );
+		else if ((!flt && nbr && point && !chr) || (flt && nbr && point && !chr)) parseDouble( string_av.substr(0, string_av.find_first_of('.')) );
+		else parseDouble( string_av );
 	}
 	return (0);
 }
