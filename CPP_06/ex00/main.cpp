@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/17 13:54:02 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/17 14:21:04 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	parseChar( std::string character ) {
 
 	const char	*cast = character.c_str();
 
-	if (((atoi(cast) > 126 && atoi(cast) < 0)) || (character.size() != 1 && !isNumber(character)))
+	if (((atoi(cast) > 126 || atoi(cast) < 0)) || (character.size() != 1 && !isNumber(character)))
 		std::cout << "char: impossible" << std::endl;
 	else if (character.size() == 1 && !isNumber(character))
 		std::cout << "char: '" << cast << "'" << std::endl;
