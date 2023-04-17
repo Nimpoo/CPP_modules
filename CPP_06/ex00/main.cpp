@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/17 17:39:39 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/17 18:19:40 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 bool	isNumber( const std::string &s )
 {
 	for (int i = 0; s[i]; i++) {
-		if (s[i] == '-' && i == 0)
+		if ((s[i] == '-' && i == 0) || (s[i] == '+' && i == 0))
 			i++;
 		if (std::isdigit(s[i]) == 0)
 			return false;
