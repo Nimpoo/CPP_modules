@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/18 17:57:11 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/18 18:16:42 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	parseInt( std::string integer ) {
 
 	int const	cast = static_cast<int>(integer.c_str()[0]);
 
-	if ((!integer.compare("inf") || !integer.compare("inff") || !integer.find("nan") || !integer.find("nanf") || !integer.find("+inf") || !integer.find("-inf")) && !isNumber(integer))
+	if (!integer.compare("inf") || !integer.compare("inff") || !integer.find("nan") || !integer.find("nanf") || !integer.find("+nan")|| !integer.find("-nan") || !integer.find("+inf") || !integer.find("-inf"))
 	{
 		std::cout << "int: impossible" << std::endl;
 		return ;
@@ -104,7 +104,7 @@ void	parseChar( std::string character ) {
 
 	const char	*cast = character.c_str();
 
-	if ((!character.compare("inf") || !character.compare("inff") || !character.find("nan") || !character.find("nanf") || !character.find("+inf") || !character.find("-inf")) && !isNumber(character))
+	if (!character.compare("inf") || !character.compare("inff") || !character.find("nan") || !character.find("nanf") || !character.find("+nan")|| !character.find("-nan") || !character.find("+inf") || !character.find("-inf"))
 	{
 		std::cout << "char: impossible" << std::endl;
 		return ;
