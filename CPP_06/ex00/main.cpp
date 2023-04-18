@@ -6,7 +6,7 @@
 /*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:55:43 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/18 18:16:42 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/18 18:39:36 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,9 +151,6 @@ int	main(int ac, char **av)
 		if (string_av[i] == '.')
 			point = true;
 	}
-
-	// if (!nbr && string_av.size() != 1)
-	// 	error = true;
 
 	if (!error)
 	{
