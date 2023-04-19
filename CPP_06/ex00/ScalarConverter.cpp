@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 18:26:08 by mayoub            #+#    #+#             */
-/*   Updated: 2023/04/19 10:17:36 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/19 16:24:38 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ bool	ScalarConverter::isNumber( std::string const &s ) {
 
 	if (s[1] == '+' || s[1] == '-')
 		return false;
+	// if (atol(s.c_str()) > INT_MAX || atol(s.c_str()) < INT_MIN)
+	// 	return false;
 
 	for (int i = 0; s[i]; i++) {
 		if ((s[i] == '-' && i == 0) || (s[i] == '+' && i == 0) || (s[i] == '.'))
@@ -115,6 +117,12 @@ void	ScalarConverter::parseChar( std::string const &character ) {
 void	ScalarConverter::parseInt( std::string const &integer ) {
 
 	int const	cast = static_cast<int>(integer.c_str()[0]);
+
+	if (atol(integer.c_str()) > INT_MAX || atol(integer.c_str()) < INT_MIN)
+	{
+		std::cout << "int: impossible" << std::endl;
+		return ;
+	}
 
 	if (!integer.compare("inf") || !integer.compare("inff") || !integer.find("nan") || !integer.find("nanf") || !integer.find("+nan")|| !integer.find("-nan") || !integer.find("+inf") || !integer.find("-inf"))
 	{
