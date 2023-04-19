@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/10 14:54:43 by mayoub            #+#    #+#              #
-#    Updated: 2023/04/10 14:54:45 by mayoub           ###   ########.fr        #
+#    Updated: 2023/04/19 10:24:37 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC		=	c++
 
 CFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	Serializer.cpp	\
+			main.cpp		\
 
 OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	Sérialisation
 
 %.o		:	%.cpp
 			$(CC) $(CFLAGS) -c $< -o $@
