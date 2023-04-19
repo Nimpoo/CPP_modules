@@ -6,11 +6,9 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:32:38 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/19 11:25:03 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/19 12:28:08 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <typeinfo>
 
 #include "Serializer.hpp"
 #include "Data.h"
