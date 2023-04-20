@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 11:57:26 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/20 12:56:34 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/20 17:33:48 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 
 template< typename T >
-void	iter( T array[], size_t const &size, void ( &f )( T &nbr ) ) {
+void	iter( T array[], size_t const &size, void ( &f )( T const &nbr ) ) {
 
 	for (size_t i = 0; i < size; i++)
 		f( array[i] );
