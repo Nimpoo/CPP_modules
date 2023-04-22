@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 18:26:08 by mayoub            #+#    #+#             */
-/*   Updated: 2023/04/19 16:24:38 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/22 13:45:08 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,7 +189,7 @@ void	ScalarConverter::parseDouble( std::string const &real ) {
 
 /*########### OPERATORS OVERLOAD ##########*/
 /*-------------- ASSIGNEMENT --------------*/
-ScalarConverter    &ScalarConverter::operator=( ScalarConverter const &rhs ) {
+ScalarConverter	&ScalarConverter::operator=( ScalarConverter const &rhs ) {
 
 	(void) rhs;
 
