@@ -13,8 +13,6 @@
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
-class A {};
-
 class	NotOccurenceException : public std::exception {
 
 public:
