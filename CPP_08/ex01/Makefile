@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 16:48:25 by mayoub            #+#    #+#              #
-#    Updated: 2023/04/20 16:48:27 by mayoub           ###   ########.fr        #
+#    Updated: 2023/04/22 13:37:00 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC		=	c++
 
 CXXFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	Span.cpp	\
+			main.cpp	\
 
 OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	ex01
 
 %.o		:	%.cpp
 			$(CC) $(CXXFLAGS) -c $< -o $@
