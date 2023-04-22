@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 13:40:09 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/22 17:17:46 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/22 18:28:00 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ public:
 
 /*############### TEMPLATES ###############*/
 	template< typename InputIterator >
-	void	addRangeNumber( InputIterator first, InputIterator last ) {
+	void	addRangeNumber( InputIterator first, InputIterator const &last ) {
 
 		while (first != last && this->_span.size() < this->_size) {
 			addNumber( *first );
