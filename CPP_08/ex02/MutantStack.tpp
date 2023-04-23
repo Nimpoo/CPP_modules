@@ -6,24 +6,24 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:02:24 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/22 19:11:30 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 10:10:09 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
 
-template< class Container >
-class MutantStack : public std::stack<Container> {
+template< typename T, class Allocator = std::deque< T > >
+class MutantStack : public std::stack< T, Allocator > {
 
 public:
 
 /*------------- CONST / DEST --------------*/
-	MutantStack( void ) {};
-	MutantStack( MutantStack const &src ) { *this = src; };
-	virtual ~MutantStack( void ) {};
+	MutantStack( void ) { std::cout << "\e[1;37mDEFAULT\e[0m \e[1;32mConstruct\e[0m of \e[1;35mMutantStack 👺\e[0m" << std::endl; };
+	MutantStack( MutantStack const &src ) { *this = src; std::cout << "\e[1;37mCOPY\e[0m \e[1;32mConstruct\e[0m of \e[1;35mMutantStack 👺\e[0m" << std::endl; };
+	virtual ~MutantStack( void ) { std::cout << "\e[1;31mDestruct\e[0m of \e[1;35mMutantStack 💥\e[0m" << std::endl; };
 
-	typedef typename std::stack<Container>::container_type::iterator		iterator;
-	typedef typename std::stack<Container>::container_type::const_iterator	const_iterator;
+	typedef typename std::stack< T >::container_type::iterator		iterator;
+	typedef typename std::stack< T >::container_type::const_iterator	const_iterator;
 
 	iterator		begin( void ) { return ( this->c.begin() ); };
 	const_iterator	begin( void ) const { return ( this->c.begin() ); };
@@ -39,11 +39,6 @@ public:
 	const_iterator	rend( void ) const { return ( this->c.rend() ); };
 
 /*----------- OPERATORS OVERLOAD ----------*/
-	MutantStack	&operator=( MutantStack const &rhs ) { (void) rhs; return (*this); };
-
-private:
-
-	
+	MutantStack	&operator=( MutantStack const &rhs ) { std::stack< T, Allocator >::operator=(rhs); return(*this); };
 
 };
-
