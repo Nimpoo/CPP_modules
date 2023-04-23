@@ -6,15 +6,18 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 11:55:59 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/20 16:02:01 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 17:49:44 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-void	multiplicator_by_two( int &nbr ) { nbr *= 2; }
+// ! WARNING ! I use here the const_cast but it's the first and last time i use this cast.
+// ! I use this cast cause the subject ask in the template a const arg for the function to passed in argument.
+// ! IT'S REALLY NOT RECOMMANDED TO DO THAT, it's just for the code can compile, can execute and fix my past error.
+void	multiplicator_by_two( int const &nbr ) { const_cast<int &>(nbr) *= 2; }
 
-void	add_wallet( std::string &random ) { random += " ₳"; }
+void	add_wallet( std::string const &random ) { const_cast<std::string &>(random) += " ₳"; }
 
 int	main(void)
 {
