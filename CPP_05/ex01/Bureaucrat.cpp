@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 23:13:14 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/08 17:22:54 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 13:55:52 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,18 @@ void	Bureaucrat::signForm( Form &form ) {
 		throw GradeTooLowException();
 	}
 }
+
+
+/*############### EXCEPTIONS ##############*/
+const char	*Bureaucrat::GradeTooLowException::what() const throw() {
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO HIGH\e[0m !\n\n\033[1m----------------------------------------------------\033[0m\n\n");
+}
+
+const char  *Bureaucrat::GradeTooHighException::what() const throw() {
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO LOW\e[0m\n\n\033[1m----------------------------------------------------\033[0m\n\n");
+}
+/*#########################################*/
+
 
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/

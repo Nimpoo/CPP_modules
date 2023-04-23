@@ -70,6 +70,17 @@ void	Bureaucrat::exceptionCheck( void ) const {
 }
 
 
+/*############### EXCEPTIONS ##############*/
+const char	*Bureaucrat::GradeTooLowException::what() const throw() {
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO HIGH\e[0m !\n\n\033[1m----------------------------------------------------\033[0m\n\n");
+}
+
+const char  *Bureaucrat::GradeTooHighException::what() const throw() {
+	return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO LOW\e[0m\n\n\033[1m----------------------------------------------------\033[0m\n\n");
+}
+/*#########################################*/
+
+
 /*############### ACCESSORS ###############*/
 /*---------------- GETERS -----------------*/
 std::string const	&Bureaucrat::getName( void ) const {

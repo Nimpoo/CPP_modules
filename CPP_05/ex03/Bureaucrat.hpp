@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 19:57:44 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/10 13:20:16 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 13:59:06 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,7 @@ public:
 
 	public:
 
-		virtual const char *what() const throw()
-		{
-			return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO HIGH\e[0m");
-		}
+		virtual const char *what() const throw();
 
 	};
 
@@ -60,10 +57,7 @@ public:
 
 	public:
 
-		virtual const char *what() const throw()
-		{
-			return ("🚨\e[1;31mALERT\e[0m🚨 : the grade is \e[1;37mTOO LOW\e[0m\n\n\033[1m----------------------------------------------------\033[0m\n\n");
-		}
+		virtual const char *what() const throw();
 
 	};
 /*#########################################*/
