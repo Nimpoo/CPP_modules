@@ -6,7 +6,7 @@
 #    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/23 11:52:39 by mayoub            #+#    #+#              #
-#    Updated: 2023/04/23 12:18:45 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/23 14:17:46 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC		=	BitcoinExchange.cpp	\
 
 OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	Bitcoin_Exchange
+NAME	=	btc
 
 %.o		:	%.cpp
 			$(CC) $(CXXFLAGS) -c $< -o $@
