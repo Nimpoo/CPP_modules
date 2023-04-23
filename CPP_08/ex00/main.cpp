@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 22:32:11 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/23 10:27:09 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/23 13:38:29 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <vector>
 #include <list>
 #include <deque>
+#include <set>
 
 #include "easyfind.hpp"
 
@@ -25,6 +26,7 @@ int	main(void)
 	std::vector<int>	vect;
 	std::list<int>		list;
 	std::deque<int>		deq;
+	std::set<int>		set;
 	int					i = 0;
 
 	std::cout << std::endl;
@@ -35,6 +37,7 @@ int	main(void)
 		vect.push_back( i );
 		list.push_back( i );
 		deq.push_back( i );
+		set.insert( i );
 	}
 
 	for (std::list<int>::const_iterator list_ite = list.begin(); list_ite != list.end() ; list_ite++, i++) {
@@ -82,7 +85,7 @@ int	main(void)
 	std::cout << "\e[4;32m[ SUCCESS TEST ]\e[0m with value : \e[1;35m7\e[0m" << std::endl;
 	try
 	{
-		::easyfind< std::deque<int> >(deq, 7);
+		::easyfind< std::list<int> >(list, 7);
 		std::cout << "\e[1;33mOccurence found 🥳\e[0m" << std::endl;
 	}
 	catch (std::exception const &e)
@@ -111,7 +114,7 @@ int	main(void)
 	std::cout << "\e[4;32m[ SUCCESS TEST ]\e[0m with value : \e[1;35m0\e[0m" << std::endl;
 	try
 	{
-		::easyfind< std::list<int> >(list, 0);
+		::easyfind< std::deque<int> >(deq, 0);
 		std::cout << "\e[1;33mOccurence found 🥳\e[0m" << std::endl;
 	}
 	catch (std::exception const &e)
@@ -123,7 +126,37 @@ int	main(void)
 	std::cout << "\e[4;31m[ FAILED TEST ]\e[0m with value : \e[1;35m12\e[0m\e[0m" << std::endl;
 	try
 	{
-		::easyfind< std::list<int> >(list, 12);
+		::easyfind< std::deque<int> >(deq, 12);
+		std::cout << "\e[1;33mOccurence found 🥳\e[0m" << std::endl;
+	}
+	catch (std::exception const &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::cout << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl;
+
+
+	std::cout << std::endl;
+	std::cout << "\033[1m----------------------- SET ------------------------\033[0m" << std::endl << std::endl;
+
+	std::cout << "\e[4;32m[ SUCCESS TEST ]\e[0m with value : \e[1;35m0\e[0m" << std::endl;
+	try
+	{
+		::easyfind< std::set<int> >(set, 0);
+		std::cout << "\e[1;33mOccurence found 🥳\e[0m" << std::endl;
+	}
+	catch (std::exception const &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::cout << "\e[4;31m[ FAILED TEST ]\e[0m with value : \e[1;35m12\e[0m\e[0m" << std::endl;
+	try
+	{
+		::easyfind< std::set<int> >(set, 12);
 		std::cout << "\e[1;33mOccurence found 🥳\e[0m" << std::endl;
 	}
 	catch (std::exception const &e)
