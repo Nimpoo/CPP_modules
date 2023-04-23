@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 22:32:11 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/22 13:34:45 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 10:27:09 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	main(void)
 	std::cout << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl << std::endl;
 
 
-	std::cout << std::endl;
 	std::cout << "\033[1m---------------------- VECTOR ----------------------\033[0m" << std::endl << std::endl;
 
 	std::cout << "\e[4;32m[ SUCCESS TEST ]\e[0m with value : \e[1;35m2\e[0m" << std::endl;
