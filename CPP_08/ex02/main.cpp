@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:00:01 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/23 10:12:27 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 10:30:58 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int main()
 	std::cout << "Check the \e[1;37mSIZE\e[0m of my \e[4;33mMutantStack\e[0m : \e[1;37m" << mstack.size() << "\e[0m" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "\e[1;37mIINITIALISE\e[0m \e[1;30mIterators\e[0m : \e[1;35mit\e[0m for \e[4;33mbegin method\e[0m and \e[1;35mite\e[0m for \e[4;33mend method\e[0m" << std::endl;
+	std::cout << "\e[1;37mINITIALISE\e[0m \e[1;30mIterators\e[0m : \e[1;35mit\e[0m for \e[4;33mbegin method\e[0m and \e[1;35mite\e[0m for \e[4;33mend method\e[0m" << std::endl;
 	std::cout << std::endl;
 
 	MutantStack<int>::iterator it = mstack.begin();
@@ -168,7 +168,7 @@ int main()
 	std::cout << "Check the \e[1;37mSIZE\e[0m of my \e[4;33mList\e[0m : \e[1;37m" << l.size() << "\e[0m" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "\e[1;37mIINITIALISE\e[0m \e[1;30mIterators\e[0m : \e[1;35mit_list\e[0m for \e[4;33mbegin method\e[0m and \e[1;35mite_list\e[0m for \e[4;33mend method\e[0m" << std::endl;
+	std::cout << "\e[1;37mINITIALISE\e[0m \e[1;30mIterators\e[0m : \e[1;35mit_list\e[0m for \e[4;33mbegin method\e[0m and \e[1;35mite_list\e[0m for \e[4;33mend method\e[0m" << std::endl;
 	std::cout << std::endl;
 
 	MutantStack<int>::iterator it_list = mstack.begin();
