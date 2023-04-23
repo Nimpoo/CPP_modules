@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 13:38:55 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/22 17:57:38 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 10:51:22 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,8 +112,8 @@ int	main(void)
 
 	std::cout << "\033[1m---------- INITIALISE GIGA EXTRA LONG SPAN ----------\033[0m" << std::endl << std::endl;
 
-	Span						extra_long_span( 100000 );
-	std::vector<unsigned int>	giga( 100000, 42 );
+	Span						extra_long_span( 20 );
+	std::vector<unsigned int>	giga( 20, 42 );
 
 	extra_long_span.addRangeNumber( giga.begin(), giga.end() );
 

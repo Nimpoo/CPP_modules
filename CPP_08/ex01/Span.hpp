@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 13:40:09 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/22 18:28:00 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/23 11:24:27 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 
+# include <cmath>
 # include <vector>
 # include <algorithm>
 
@@ -67,7 +68,6 @@ private:
 
 	unsigned int						_size;
 
-	std::vector<unsigned int>::iterator	_span_ite;
 	std::vector<unsigned int>			_span;
 
 };
