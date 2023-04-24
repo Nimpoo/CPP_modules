@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 22:32:11 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/23 13:38:29 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/24 16:14:06 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,15 @@ int	main(void)
 
 	for (std::list<int>::const_iterator list_ite = list.begin(); list_ite != list.end() ; list_ite++, i++) {
 
+		std::set<int>::const_iterator	set_it = set.begin();
+
 		std::cout << "\e[1;32mVECTOR\e[0m	n°[ \e[1;35m" << i << "\e[0m ] : \033[1m" << vect[ i ] << "\033[0m" << std::endl;
 		std::cout << "\e[1;31mLIST\e[0m	n°[ \e[1;35m" << i << "\e[0m ] : \033[1m" << *list_ite << "\033[0m" << std::endl;
 		std::cout << "\e[1;34mDEQUE\e[0m	n°[ \e[1;35m" << i << "\e[0m ] : \033[1m" << deq[ i ] << "\033[0m" << std::endl;
+		std::cout << "\e[1;39mSET\e[0m	n°[ \e[1;35m" << i << "\e[0m ] : \033[1m" << *set_it << "\033[0m" << std::endl;
 		std::cout << std::endl;
+
+		set_it++;
 	}
 
 	std::cout << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl << std::endl;
