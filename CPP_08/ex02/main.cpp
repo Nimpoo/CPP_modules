@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:00:01 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/23 10:30:58 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/24 16:11:54 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main()
 	std::cout << "Adding \e[1;37m5\e[0m in my \e[4;33mMutantStack\e[0m" << std::endl;
 	mstack.push(5);
 
-	std::cout << "Adding \e[1;37m7\e[0m in my \e[4;33mMutantStack\e[0m" << std::endl;
+	std::cout << "Adding \e[1;37m17\e[0m in my \e[4;33mMutantStack\e[0m" << std::endl;
 	mstack.push(17);
 
 	std::cout << std::endl;
@@ -127,7 +127,7 @@ int main()
 	std::cout << "Adding \e[1;37m5\e[0m in my \e[4;33mList\e[0m" << std::endl;
 	l.push_back(5);
 
-	std::cout << "Adding \e[1;37m7\e[0m in my \e[4;33mList\e[0m" << std::endl;
+	std::cout << "Adding \e[1;37m17\e[0m in my \e[4;33mList\e[0m" << std::endl;
 	l.push_back(17);
 
 	std::cout << std::endl;

@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:02:24 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/23 10:10:09 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/24 16:12:36 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	MutantStack( MutantStack const &src ) { *this = src; std::cout << "\e[1;37mCOPY\e[0m \e[1;32mConstruct\e[0m of \e[1;35mMutantStack 👺\e[0m" << std::endl; };
 	virtual ~MutantStack( void ) { std::cout << "\e[1;31mDestruct\e[0m of \e[1;35mMutantStack 💥\e[0m" << std::endl; };
 
-	typedef typename std::stack< T >::container_type::iterator		iterator;
+	typedef typename std::stack< T >::container_type::iterator			iterator;
 	typedef typename std::stack< T >::container_type::const_iterator	const_iterator;
 
 	iterator		begin( void ) { return ( this->c.begin() ); };
