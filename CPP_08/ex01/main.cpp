@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 13:38:55 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/23 11:32:47 by mayoub           ###   ########.fr       */
+/*   Updated: 2023/04/24 16:10:56 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int	main(void)
 
 	std::cout << std::endl;
 	std::cout << "\033[1m----------------------------------------------------\033[0m" << std::endl << std::endl << std::endl;
+
 
 	std::cout << "\033[1m-------------- ADD NUMBER IN FULL SPAN -------------\033[0m" << std::endl << std::endl;
 
