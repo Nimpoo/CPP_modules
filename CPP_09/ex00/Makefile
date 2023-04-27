@@ -6,13 +6,13 @@
 #    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/23 11:52:39 by mayoub            #+#    #+#              #
-#    Updated: 2023/04/23 14:17:46 by sihemayoub       ###   ########.fr        #
+#    Updated: 2023/04/24 14:44:25 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 
-CXXFLAGS	=	-Werror -Wall -Wextra -std=c++98
+CXXFLAGS	=	-Werror -Wall -Wextra -g -fsanitize=address -std=c++98
 
 SRC		=	BitcoinExchange.cpp	\
 			main.cpp			\
