@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+         #
+#    By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/23 11:52:56 by mayoub            #+#    #+#              #
-#    Updated: 2023/04/23 11:52:58 by mayoub           ###   ########.fr        #
+#    Updated: 2023/04/28 17:30:53 by sihemayoub       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC		=	c++
 
 CXXFLAGS	=	-Werror -Wall -Wextra -std=c++98
 
-SRC		=	
+SRC		=	PmergeMe.cpp	\
+			main.cpp		\
 
 OBJ		=	$(SRC:.cpp=.o)
 
-NAME	=	
+NAME	=	PmergeMe
 
 %.o		:	%.cpp
 			$(CC) $(CXXFLAGS) -c $< -o $@
