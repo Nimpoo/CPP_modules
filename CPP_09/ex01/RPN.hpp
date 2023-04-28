@@ -6,33 +6,40 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:13:24 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/27 18:18:18 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/28 16:45:59 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RNP_HPP
-# define RNP_HPP
+#ifndef RPN_HPP
+# define RPN_HPP
 
 # include <iostream>
+# include <sstream>
+
+# include <stdexcept>
 
 # include <algorithm>
 # include <stack>
 
-class RNP {
+class RPN {
 
 public:
 
 /*------------- CONST / DEST --------------*/
-	RNP( void );
-	RNP( RNP const &src );
-	~RNP( void );
+	RPN( std::stringstream rpn, std::stringstream ss );
+	RPN( RPN const &src );
+	~RPN( void );
+
+	bool	issign( char c ) const;
 
 /*----------- OPERATOR OVERLOAD -----------*/
-	RNP	&operator=( RNP const &rhs );
+	RPN	&operator=( RPN const &rhs );
 
 private:
 
-	
+	RPN( void );
+
+	std::stack<int>	_stack;
 
 };
 
