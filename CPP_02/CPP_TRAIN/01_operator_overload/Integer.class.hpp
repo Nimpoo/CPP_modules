@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:26:17 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/03/02 17:55:37 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/04/28 12:53:09 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 // * Les opérateurs d'ASSIGNATION et d'ADDITION sont tout les 2 BINAIRE (x = y, x + y)
 
 // ? L'opérateur '=' prend 2 paramètres : LEFT-HAND SIDE et RIGHT-HAND SIDE (rhs)
-// * Right-hand side est caché, car ce sera 'this' (_n = rhs)
+// * Left-hand side est caché, car ce sera 'this' (this->_n = rhs._n)
 // * Elle n'est pas const car il y a une modification de l'instance courante
 // ! UNE RÉFÉRENCE SUR L'INSTANCE COURANTE SERA RENVOYÉE
 // ! Car cela permettra de traiter ce genre de chainage : a = b = c = d (traité de droite à gauche)
