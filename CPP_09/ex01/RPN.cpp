@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:13:05 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/28 17:09:55 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/05/12 14:01:40 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ RPN::RPN( std::stringstream rpn, std::stringstream ss ) {
 		}
 	}
 	if (this->_stack.size() != 1)
-		throw std::invalid_argument("\e[1;31m[Error]\e[0m invalid PROUTE argument.");
+		throw std::invalid_argument("\e[1;31m[Error]\e[0m invalid INPUT argument.");
 	std::cout << this->_stack.top() << std::endl;
 
 }
