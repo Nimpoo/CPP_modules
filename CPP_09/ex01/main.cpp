@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:45:22 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/28 16:45:47 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/05/12 14:31:29 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	main(int ac, char **av)
 
 	try
 	{
-		RPN	test( (std::stringstream(av[1])), (std::stringstream(av[1])) );
+		std::stringstream	stream_1(av[1]);
+		std::stringstream	stream_2(av[1]);
+		RPN	test( stream_1, stream_2 );
 	}
 	catch (std::exception const &e)
 	{

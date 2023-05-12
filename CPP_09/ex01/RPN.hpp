@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:13:24 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/04/28 16:45:59 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/05/12 14:12:48 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class RPN {
 public:
 
 /*------------- CONST / DEST --------------*/
-	RPN( std::stringstream rpn, std::stringstream ss );
+	RPN( std::stringstream &rpn, std::stringstream &ss );
 	RPN( RPN const &src );
 	~RPN( void );
 

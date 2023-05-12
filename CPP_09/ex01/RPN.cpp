@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:13:05 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/05/12 14:01:40 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/05/12 14:31:36 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ RPN::RPN( void ) { }
 /*-----------------------------------------*/
 
 /*----------- INIT CONSTRUCTOR ------------*/
-RPN::RPN( std::stringstream rpn, std::stringstream ss ) {
+RPN::RPN( std::stringstream &rpn, std::stringstream &ss ) {
 
 	std::string			tmp;
 
