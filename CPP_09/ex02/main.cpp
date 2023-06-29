@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mayoub <mayoub@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:31:33 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/05/12 13:28:32 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/06/29 14:16:56 by mayoub           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ int main(int ac, char **av) {
 /*-----------------------------------------*/
 
 /*########## CHRONO SORTING VECTOR ########*/
-	clock_t	startVector = std::clock();
+	clock_t		startVector = std::clock();
 
-	PmergeMe			sortingVector( ac, av, vect );
+	PmergeMe	sortingVector( ac, av, vect );
 
-	clock_t	endVector = std::clock();
-	double	durationVector = static_cast<double>(endVector - startVector) / CLOCKS_PER_SEC;
+	clock_t		endVector = std::clock();
+	double		durationVector = static_cast<double>(endVector - startVector) / CLOCKS_PER_SEC;
 /*#########################################*/
 
 	std::vector<int>	vectorCopy = sortingVector.getVector();
